@@ -1,6 +1,7 @@
 import AboutHero from '../components/sections/about/AboutHero';
 import StudioStory from '../components/sections/about/StudioStory';
 import StudioPrinciples from '../components/sections/about/StudioPrinciples';
+import StudioPhilosophy from '../components/sections/about/StudioPhilosophy';
 import AboutGames from '../components/sections/about/AboutGames';
 import AboutClosing from '../components/sections/about/AboutClosing';
 import PageMeta from '../components/common/PageMeta';
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <AboutHero />
       <StudioStory />
       <StudioPrinciples />
+      <StudioPhilosophy />
       <AboutGames games={allGames} />
       <AboutClosing />
     </main>

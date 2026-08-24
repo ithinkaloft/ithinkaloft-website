@@ -1,0 +1,25 @@
+.studio-philosophy {
+  padding-block: clamp(4rem, 10vw, 6rem) clamp(6rem, 12vw, 8rem);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.studio-philosophy-content {
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.studio-philosophy-statement {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.studio-philosophy-highlight {
+  color: var(--brand-primary);
+}
