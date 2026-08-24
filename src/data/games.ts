@@ -59,12 +59,12 @@ export const games: Game[] = [
         ]
       },
       screenshots: [
-        { src: '/src/assets/games/core-forge/web/gameplay-wave.webp', alt: 'CORE FORGE gameplay showing the sorting puzzle, weapon systems and automated enemies.', width: 727, height: 1560 },
-        { src: '/src/assets/games/core-forge/web/gameplay-boss-crusher.webp', alt: 'Crusher boss encounter during Sector 1 of CORE FORGE.', width: 727, height: 1560 },
-        { src: '/src/assets/games/core-forge/web/weapon-fusion.webp', alt: 'Weapon Fusion choices including Cryo Burst, Toxic Surge and Frozen Plague.', width: 727, height: 1560 },
-        { src: '/src/assets/games/core-forge/web/facility-ai-alert.webp', alt: 'Facility AI security alert introducing the automated defense takeover.', width: 727, height: 1560 },
-        { src: '/src/assets/games/core-forge/web/opening-directive.webp', alt: 'Four energy systems feeding the CORE FORGE facility machinery.', width: 1024, height: 1536 },
-        { src: '/src/assets/games/core-forge/web/opening-threat.webp', alt: 'Automated machines occupying a hostile CORE FORGE facility sector.', width: 1024, height: 1536 }
+        { src: '/src/assets/games/core-forge/web/gameplay-wave.webp', alt: 'CORE FORGE gameplay showing the sorting puzzle, weapon systems and automated enemies.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/src/assets/games/core-forge/web/gameplay-boss-crusher.webp', alt: 'Crusher boss encounter during Sector 1 of CORE FORGE.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/src/assets/games/core-forge/web/weapon-fusion.webp', alt: 'Weapon Fusion choices including Cryo Burst, Toxic Surge and Frozen Plague.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/src/assets/games/core-forge/web/facility-ai-alert.webp', alt: 'Facility AI security alert introducing the automated defense takeover.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/src/assets/games/core-forge/web/opening-directive.webp', alt: 'Four energy systems feeding the CORE FORGE facility machinery.', width: 1024, height: 1536, category: 'World & Systems' },
+        { src: '/src/assets/games/core-forge/web/opening-threat.webp', alt: 'Automated machines occupying a hostile CORE FORGE facility sector.', width: 1024, height: 1536, category: 'World & Systems' }
       ]
     },
     theme: {

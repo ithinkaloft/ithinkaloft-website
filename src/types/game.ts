@@ -21,6 +21,7 @@ export interface GameMediaImage {
   width?: number;
   height?: number;
   sources?: GameMediaSource[];
+  category?: string;
 }
 
 export interface GameMedia {

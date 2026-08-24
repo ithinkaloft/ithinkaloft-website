@@ -7,6 +7,10 @@
   margin-bottom: var(--space-8);
 }
 
+.game-media-gallery-group + .game-media-gallery-group {
+  margin-top: clamp(3rem, 6vw, 6rem);
+}
+
 .game-media-gallery-eyebrow {
   display: block;
   font-size: 0.875rem;

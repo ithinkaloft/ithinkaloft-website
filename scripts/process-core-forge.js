@@ -55,7 +55,7 @@ async function processImages() {
     const p = path.join('src/assets/games/core-forge/screenshots', file);
     const meta = await sharp(p).metadata();
     await sharp(p)
-      .extract({ left: 0, top: 40, width: meta.width, height: meta.height - 40 })
+      .extract({ left: 0, top: 90, width: meta.width, height: meta.height - 90 })
       .webp({ quality: 85 })
       .toFile(path.join(outDir, file.replace('.png', '.webp')));
   }
