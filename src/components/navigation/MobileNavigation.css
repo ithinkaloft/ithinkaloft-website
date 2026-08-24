@@ -10,7 +10,7 @@
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  animation: backdropFadeIn var(--motion-ui) forwards;
+  animation: backdropFadeIn var(--motion-base) var(--ease-out) forwards;
 }
 
 .mobile-nav-drawer {
@@ -21,7 +21,7 @@
   border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  animation: drawerSlideIn var(--motion-ui) forwards;
+  animation: drawerSlideIn var(--motion-base) var(--ease-out) forwards;
 }
 
 .mobile-nav-header {
@@ -80,7 +80,7 @@
   font-weight: 600;
   color: var(--text-secondary);
   padding: var(--space-2) 0;
-  transition: color var(--motion-micro);
+  transition: color var(--motion-fast) var(--ease-standard);
 }
 
 .mobile-nav-link.active {

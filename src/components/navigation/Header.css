@@ -9,7 +9,7 @@
   z-index: calc(var(--z-header) + 10);
   font-weight: 600;
   border-radius: 4px;
-  transition: top var(--motion-micro);
+  transition: top var(--motion-fast) var(--ease-standard);
 }
 
 .skip-to-content:focus {
@@ -81,7 +81,7 @@
   color: var(--text-secondary);
   font-weight: 500;
   font-size: 1rem;
-  transition: color var(--motion-micro);
+  transition: color var(--motion-fast) var(--ease-standard);
   position: relative;
 }
 

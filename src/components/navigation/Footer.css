@@ -58,7 +58,7 @@
 .footer-link {
   color: var(--text-primary);
   font-weight: 500;
-  transition: color var(--motion-micro);
+  transition: color var(--motion-fast) var(--ease-standard);
 }
 
 .footer-link:hover {
@@ -100,7 +100,7 @@
 .footer-social-link {
   color: var(--text-secondary);
   font-size: 0.875rem;
-  transition: color var(--motion-micro);
+  transition: color var(--motion-fast) var(--ease-standard);
 }
 
 .footer-social-link:hover {

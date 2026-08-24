@@ -7,7 +7,11 @@
   text-decoration: none;
   cursor: pointer;
   border-radius: var(--radius-sm);
-  transition: transform var(--motion-micro), background-color var(--motion-micro), color var(--motion-micro), border-color var(--motion-micro);
+  transition: transform var(--motion-fast) var(--ease-standard), 
+              background-color var(--motion-fast) var(--ease-standard), 
+              color var(--motion-fast) var(--ease-standard), 
+              border-color var(--motion-fast) var(--ease-standard),
+              filter var(--motion-fast) var(--ease-standard);
 }
 
 .btn:disabled, .btn[aria-disabled="true"] {
@@ -40,9 +44,20 @@
   border: 1px solid transparent;
 }
 
-.btn-primary:hover:not(:disabled) {
-  transform: translateY(-1px);
-  filter: brightness(1.1);
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background-color: var(--surface);
+    border-color: var(--text-secondary);
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    background-color: var(--surface);
+  }
 }
 
 .btn-secondary {
@@ -51,26 +66,19 @@
   border: 1px solid var(--border);
 }
 
-.btn-secondary:hover:not(:disabled) {
-  background-color: var(--surface);
-  border-color: var(--text-secondary);
-}
-
 .btn-ghost {
   background-color: transparent;
   color: var(--text-primary);
   border: 1px solid transparent;
 }
 
-.btn-ghost:hover:not(:disabled) {
-  background-color: var(--surface);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .btn {
-    transition: background-color var(--motion-micro), color var(--motion-micro), border-color var(--motion-micro);
+    transition: background-color 0ms, color 0ms, border-color 0ms, filter 0ms;
   }
-  .btn:hover:not(:disabled) {
-    transform: none;
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover:not(:disabled) {
+      transform: none;
+    }
   }
 }

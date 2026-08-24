@@ -15,6 +15,7 @@ export interface GameMedia {
   thumbnail?: string;
   screenshots: string[];
   trailer?: string;
+  video?: string;
 }
 
 export interface GameTheme {

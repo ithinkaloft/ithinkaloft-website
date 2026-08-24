@@ -1,0 +1,70 @@
+.brand-motif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.brand-motif-svg {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  overflow: visible;
+}
+
+/* Animations */
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-12px) translateX(4px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-8px) translateX(-6px); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseOpacity {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Apply animations */
+.motif-ring {
+  transform-origin: 250px 150px;
+  animation: slowRotate 45s linear infinite;
+}
+
+.motif-node-1 { animation: float1 12s ease-in-out infinite; }
+.motif-node-2 { animation: float2 14s ease-in-out infinite, pulseOpacity 8s ease-in-out infinite; }
+.motif-node-3 { animation: float3 9s ease-in-out infinite; }
+.motif-diamond { animation: float1 16s ease-in-out infinite reverse; }
+.motif-fragment { animation: float2 10s ease-in-out infinite; }
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .motif-ring,
+  .motif-node-1,
+  .motif-node-2,
+  .motif-node-3,
+  .motif-diamond,
+  .motif-fragment {
+    animation: none;
+    transform: none;
+  }
+}

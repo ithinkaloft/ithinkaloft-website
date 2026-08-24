@@ -1,0 +1,90 @@
+.studio-intro {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-12) 0;
+}
+
+@media (min-width: 1024px) {
+  .studio-intro {
+    padding: var(--space-20) 0;
+  }
+}
+
+.studio-intro-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .studio-intro-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+}
+
+.studio-intro-header {
+  max-width: 42rem;
+}
+
+.studio-intro-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+}
+
+.studio-intro-title {
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.studio-intro-content {
+  max-width: 38rem;
+}
+
+@media (min-width: 1024px) {
+  .studio-intro-content {
+    /* Push slightly down to align naturally with the multi-line H2 on desktop */
+    padding-top: var(--space-2);
+  }
+}
+
+.studio-intro-description {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 var(--space-8) 0;
+}
+
+/* Faint background motif */
+.studio-intro-decoration {
+  position: absolute;
+  bottom: -20%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.04;
+  transform: rotate(-15deg);
+}
+
+@media (min-width: 1024px) {
+  .studio-intro-decoration {
+    width: 600px;
+    height: 600px;
+    right: 5%;
+    bottom: -30%;
+  }
+}

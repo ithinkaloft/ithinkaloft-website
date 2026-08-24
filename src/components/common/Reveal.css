@@ -1,0 +1,24 @@
+.reveal-wrapper {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--motion-reveal) var(--ease-out) var(--reveal-delay, 0ms),
+              transform var(--motion-reveal) var(--ease-out) var(--reveal-delay, 0ms);
+  /* Don't block interactions before reveal in case JS fails */
+  pointer-events: none; 
+}
+
+.reveal-wrapper.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Fallback for no-js or reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+    pointer-events: auto;
+  }
+}
