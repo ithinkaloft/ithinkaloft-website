@@ -21,3 +21,35 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid var(--brand-primary);
   outline-offset: 2px;
 }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--motion-fast) var(--ease-standard);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.button:hover, .button:focus-visible {
+  background-color: color-mix(in srgb, var(--surface-elevated) 80%, white);
+}
+
+.button-primary {
+  background-color: var(--brand-primary);
+  color: #fff;
+  border: none;
+}
+
+.button-primary:hover, .button-primary:focus-visible {
+  background-color: var(--brand-light);
+}

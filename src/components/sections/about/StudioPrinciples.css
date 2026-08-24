@@ -1,0 +1,114 @@
+.studio-principles {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .sp-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-16);
+    align-items: flex-start; /* Important for sticky behavior */
+  }
+}
+
+/* Heading Column */
+.sp-heading-sticky {
+  /* On desktop, keep the heading anchored while the list scrolls by */
+  position: relative;
+}
+
+@media (min-width: 1024px) and (min-height: 700px) {
+  .sp-heading-sticky {
+    position: sticky;
+    top: calc(80px + var(--space-8)); /* Header height + spacing */
+  }
+}
+
+.sp-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-6);
+}
+
+.sp-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* List Column */
+.sp-list-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-item {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--border);
+}
+
+.sp-item-last {
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .sp-item {
+    flex-direction: row;
+    gap: var(--space-8);
+    padding-block: var(--space-10);
+  }
+}
+
+.sp-item-number {
+  font-family: var(--font-mono, monospace);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-4);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .sp-item-number {
+    margin-bottom: 0;
+    width: 2rem;
+  }
+}
+
+.sp-item-content {
+  flex-grow: 1;
+}
+
+.sp-item-title {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--space-4) 0;
+  color: var(--text-primary);
+}
+
+.sp-item-desc {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 38rem;
+}

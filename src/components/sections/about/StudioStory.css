@@ -1,0 +1,59 @@
+.studio-story {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  background-color: var(--bg-secondary); /* Elevated neutral surface */
+  color: var(--text-primary);
+}
+
+.studio-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .studio-story-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); /* 45/55 roughly */
+    gap: var(--space-16);
+  }
+}
+
+.studio-story-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-6);
+}
+
+.studio-story-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.studio-story-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.studio-story-paragraphs p {
+  margin: 0;
+  max-width: 38rem;
+}
+
+/* On desktop, vertically center the copy slightly or just let it flow */
+@media (min-width: 900px) {
+  .studio-story-copy-col {
+    padding-top: var(--space-8);
+  }
+}

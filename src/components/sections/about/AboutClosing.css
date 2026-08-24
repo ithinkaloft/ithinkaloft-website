@@ -1,0 +1,95 @@
+.about-closing {
+  padding-block: clamp(8rem, 15vw, 12rem);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.about-closing-content {
+  max-width: 48rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-closing-eyebrow {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-8);
+}
+
+.about-closing-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-8) 0;
+}
+
+.about-closing-desc {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-12) 0;
+}
+
+.about-closing-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .about-closing-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-8);
+    width: auto;
+  }
+}
+
+.about-closing-primary-action {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .about-closing-primary-action {
+    width: auto;
+  }
+}
+
+.about-closing-secondary-action {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: color var(--motion-fast) var(--ease-standard);
+  padding: var(--space-2) var(--space-4); /* Improve tap target */
+}
+
+.about-closing-secondary-action:hover,
+.about-closing-secondary-action:focus-visible {
+  color: var(--text-primary);
+}
+
+.about-closing-secondary-action span {
+  color: var(--brand-primary);
+  transition: transform var(--motion-fast) var(--ease-standard);
+}
+
+.about-closing-secondary-action:hover span,
+.about-closing-secondary-action:focus-visible span {
+  transform: translateX(4px);
+}

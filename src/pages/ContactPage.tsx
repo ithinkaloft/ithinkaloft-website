@@ -1,18 +1,18 @@
-import Container from '../components/common/Container';
+import ContactHero from '../components/sections/contact/ContactHero';
+import ContactMethods from '../components/sections/contact/ContactMethods';
 import PageMeta from '../components/common/PageMeta';
 
 export default function ContactPage() {
   return (
-    <>
+    <main className="page-contact">
       <PageMeta 
-        title="Contact"
-        description="Get in touch with ithinkaloft."
-        path="/contact"
+        title="Contact | ithinkaloft" 
+        description="Contact ithinkaloft for studio enquiries, game support, feedback, and business requests." 
+        path="/contact" 
       />
-      <Container style={{ paddingTop: 'var(--space-8)' }}>
-        <h1>CONTACT</h1>
-        <p>Contact Page Placeholder</p>
-      </Container>
-    </>
+      
+      <ContactHero />
+      <ContactMethods />
+    </main>
   );
 }
