@@ -24,18 +24,20 @@ export default function GameMediaGallery({ game }: GameMediaGalleryProps) {
 
         <div className="game-media-gallery-grid">
           {game.media.screenshots.map((screenshot, idx) => {
-            const isLandscape = screenshot.width > screenshot.height;
+            const w = screenshot.width || 1;
+            const h = screenshot.height || 1;
+            const isLandscape = w > h;
             return (
               <Reveal key={idx} delay={idx * 60}>
                 <div 
                   className={`game-media-gallery-item ${isLandscape ? 'is-landscape' : 'is-portrait'}`}
-                  style={{ aspectRatio: `${screenshot.width} / ${screenshot.height}` }}
+                  style={{ aspectRatio: `${w} / ${h}` }}
                 >
                   <img 
                     src={screenshot.src} 
                     alt={screenshot.alt}
-                    width={screenshot.width}
-                    height={screenshot.height}
+                    width={w}
+                    height={h}
                     loading="lazy"
                     decoding="async"
                     className="game-media-gallery-image"

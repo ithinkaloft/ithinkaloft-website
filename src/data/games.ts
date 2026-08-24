@@ -36,7 +36,37 @@ export const games: Game[] = [
       description: 'The facility is still being forged.',
       note: 'Development is underway for Android.'
     },
-    media: {},
+    media: {
+      hero: {
+        src: '/src/assets/games/core-forge/web/core-forge-hero-1600.webp',
+        alt: 'Atmospheric reactor chamber of the CORE FORGE facility',
+        width: 1600,
+        height: 3557, // 1600 * 1870 / 841
+        sources: [
+          { src: '/src/assets/games/core-forge/web/core-forge-hero-1600.webp', width: 1600 },
+          { src: '/src/assets/games/core-forge/web/core-forge-hero-1200.webp', width: 1200 },
+          { src: '/src/assets/games/core-forge/web/core-forge-hero-800.webp', width: 800 }
+        ]
+      },
+      thumbnail: {
+        src: '/src/assets/games/core-forge/web/core-forge-thumbnail-960.webp',
+        alt: 'Four colored energy systems feeding the CORE FORGE machinery',
+        width: 960,
+        height: 540,
+        sources: [
+          { src: '/src/assets/games/core-forge/web/core-forge-thumbnail-960.webp', width: 960 },
+          { src: '/src/assets/games/core-forge/web/core-forge-thumbnail-640.webp', width: 640 }
+        ]
+      },
+      screenshots: [
+        { src: '/src/assets/games/core-forge/web/gameplay-wave.webp', alt: 'CORE FORGE gameplay showing the sorting puzzle, weapon systems and automated enemies.', width: 727, height: 1560 },
+        { src: '/src/assets/games/core-forge/web/gameplay-boss-crusher.webp', alt: 'Crusher boss encounter during Sector 1 of CORE FORGE.', width: 727, height: 1560 },
+        { src: '/src/assets/games/core-forge/web/weapon-fusion.webp', alt: 'Weapon Fusion choices including Cryo Burst, Toxic Surge and Frozen Plague.', width: 727, height: 1560 },
+        { src: '/src/assets/games/core-forge/web/facility-ai-alert.webp', alt: 'Facility AI security alert introducing the automated defense takeover.', width: 727, height: 1560 },
+        { src: '/src/assets/games/core-forge/web/opening-directive.webp', alt: 'Four energy systems feeding the CORE FORGE facility machinery.', width: 1024, height: 1536 },
+        { src: '/src/assets/games/core-forge/web/opening-threat.webp', alt: 'Automated machines occupying a hostile CORE FORGE facility sector.', width: 1024, height: 1536 }
+      ]
+    },
     theme: {
       mode: 'dark',
       accent: '#69e6ff',
@@ -48,6 +78,7 @@ export const games: Game[] = [
     seo: {
       title: 'CORE FORGE',
       description: 'An atmospheric puzzle game blending satisfying mechanics with deep progression.',
+      image: '/src/assets/games/core-forge/web/core-forge-og-1200x630.webp'
     },
     featured: true
   },

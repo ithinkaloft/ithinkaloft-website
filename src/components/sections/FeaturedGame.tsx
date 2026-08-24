@@ -37,15 +37,26 @@ export default function FeaturedGame({ game }: FeaturedGameProps) {
                 />
               </svg>
             </div>
-
             {game.media.hero ? (
-              <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-lg)' }}>
-                <img 
-                  src={game.media.hero.src} 
-                  alt={game.media.hero.alt} 
-                  className="featured-media-image"
-                />
-                <div className="featured-media-overlay" />
+              <div className="featured-media-image-container">
+                <picture>
+                  {game.media.hero.sources?.map((source) => (
+                    <source 
+                      key={source.width} 
+                      srcSet={source.src} 
+                      media={`(max-width: ${source.width}px)`} 
+                    />
+                  ))}
+                  <img 
+                    src={game.media.hero.src} 
+                    alt={game.media.hero.alt} 
+                    className="featured-media-image"
+                    width={game.media.hero.width}
+                    height={game.media.hero.height}
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </picture>
               </div>
             ) : (
               <div className="featured-media-placeholder">

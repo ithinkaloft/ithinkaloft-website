@@ -158,31 +158,27 @@
   font-family: var(--font-display);
 }
 
+.featured-media-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* Enforce an aspect ratio if the image is portrait but we want a landscape crop here, or let the image dictate it. Wait, the original was a tall portrait (841x1870). We should probably constrain its height or aspect ratio on desktop. Let's use an aspect ratio */
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--game-text) 10%, transparent);
+  z-index: 2;
+}
+
 /* Real Image Media */
 .featured-media-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  border: 1px solid color-mix(in srgb, var(--game-text) 10%, transparent);
+  object-position: center 30%; /* Focus on the upper reactor chamber */
   transition: transform 0.4s ease-out;
 }
 
 .featured-media-wrapper:hover .featured-media-image {
   transform: scale(1.015);
-}
-
-/* Overlay gradient to sink it in */
-.featured-media-overlay {
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--game-background) 80%, transparent),
-    transparent 45%
-  );
-  pointer-events: none;
 }
 
 /* Decorative SVG Motif behind image */
@@ -195,7 +191,7 @@
   height: 140%;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.15; /* heavily reduced opacity */
 }
 
 @keyframes rotateArc {

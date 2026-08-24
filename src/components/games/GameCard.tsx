@@ -17,11 +17,32 @@ export default function GameCard({ game }: GameCardProps) {
       <Link to={`/games/${game.slug}`} className="game-card" aria-label={`Explore ${game.title}`}>
         {/* Media / Visual */}
         <div className="game-card-media">
-          {mediaSrc ? (
+          {game.media.thumbnail ? (
+            <picture>
+              {game.media.thumbnail.sources?.map((source) => (
+                <source 
+                  key={source.width} 
+                  srcSet={source.src} 
+                  media={`(max-width: ${source.width}px)`} 
+                />
+              ))}
+              <img 
+                src={game.media.thumbnail.src} 
+                alt="" 
+                className="game-card-image"
+                width={game.media.thumbnail.width}
+                height={game.media.thumbnail.height}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          ) : mediaSrc ? (
             <img 
               src={mediaSrc} 
               alt="" 
               className="game-card-image" 
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <GameMediaFallback title={game.title} />

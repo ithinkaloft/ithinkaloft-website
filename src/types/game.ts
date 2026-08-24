@@ -10,13 +10,17 @@ export interface GameStoreLinks {
   steam?: string;
 }
 
-
+export interface GameMediaSource {
+  src: string;
+  width: number;
+}
 
 export interface GameMediaImage {
   src: string;
   alt: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
+  sources?: GameMediaSource[];
 }
 
 export interface GameMedia {

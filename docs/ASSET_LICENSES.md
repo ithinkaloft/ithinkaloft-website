@@ -5,7 +5,8 @@ This document records the origin and usage rights for any third-party assets (fo
 ## First-Party Assets
 Unless otherwise specified, all branding, artwork, code, and game-specific assets are original creations of ithinkaloft and remain the sole property of the studio.
 
----
+This explicitly includes:
+- **CORE FORGE**: Logo, reactor artwork, energy chamber graphics, and all gameplay screenshots.
 
 ## Third-Party Assets
 
