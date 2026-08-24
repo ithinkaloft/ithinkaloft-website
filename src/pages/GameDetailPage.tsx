@@ -1,10 +1,24 @@
 import { useParams } from 'react-router-dom';
 import { getGameBySlug } from '../data/games';
 import NotFoundPage from './NotFoundPage';
-import Container from '../components/common/Container';
-import Section from '../components/common/Section';
 import { GameLayout } from '../layouts/GameLayout';
+import GameHero from '../components/games/GameHero';
+import GameOverview from '../components/games/GameOverview';
+import GameHighlights from '../components/games/GameHighlights';
+import CoreForgeExperience from '../components/games/details/CoreForgeExperience';
+import PocketPuzzleArcadeExperience from '../components/games/details/PocketPuzzleArcadeExperience';
+import GameMediaGallery from '../components/games/GameMediaGallery';
+import GameAvailability from '../components/games/GameAvailability';
+import MoreGames from '../components/games/MoreGames';
 import PageMeta from '../components/common/PageMeta';
+import type { Game } from '../types/game';
+
+import React from 'react';
+
+const gameSpecificExperiences: Record<string, React.FC<{ game: Game }>> = {
+  'core-forge': () => <CoreForgeExperience />,
+  'pocket-puzzle-arcade': (props) => <PocketPuzzleArcadeExperience {...props} />,
+};
 
 export default function GameDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -17,6 +31,8 @@ export default function GameDetailPage() {
     return <NotFoundPage />;
   }
 
+  const CustomExperienceComponent = gameSpecificExperiences[game.slug];
+
   return (
     <>
       <PageMeta 
@@ -26,40 +42,27 @@ export default function GameDetailPage() {
         image={game.seo.image}
       />
       <GameLayout game={game}>
-        <Container>
-          <Section spacing="large">
-            <div style={{ marginBottom: 'var(--space-8)' }}>
-              <span style={{ 
-                display: 'block', 
-                fontSize: '0.875rem', 
-                fontWeight: 700, 
-                textTransform: 'uppercase', 
-                letterSpacing: '0.05em', 
-                color: 'var(--game-accent, var(--brand-primary))',
-                marginBottom: 'var(--space-3)'
-              }}>
-                Game Detail Prototype
-              </span>
-              <h1 style={{ 
-                fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-                margin: '0 0 var(--space-4) 0',
-                lineHeight: 1.1 
-              }}>
-                {game.title}
-              </h1>
-              <p style={{ 
-                fontSize: '1.125rem', 
-                color: 'var(--text-secondary)', 
-                maxWidth: '42rem',
-                margin: 0,
-                lineHeight: 1.6
-              }}>
-                {game.description}
-              </p>
-            </div>
-          </Section>
-        </Container>
+        {/* Game Hero */}
+        <GameHero game={game} />
+
+        {/* Game Overview */}
+        <GameOverview game={game} />
+
+        {/* Game Highlights */}
+        <GameHighlights game={game} />
+
+        {/* Game-Specific Custom Experience */}
+        {CustomExperienceComponent && <CustomExperienceComponent game={game} />}
+
+        {/* Game Media Gallery */}
+        <GameMediaGallery game={game} />
+
+        {/* Game Availability */}
+        <GameAvailability game={game} />
       </GameLayout>
+
+      {/* More Games sits outside GameLayout to return to the studio theme */}
+      <MoreGames currentGame={game} />
     </>
   );
 }

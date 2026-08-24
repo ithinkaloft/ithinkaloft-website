@@ -1,0 +1,56 @@
+.game-media-gallery {
+  padding-block: clamp(4rem, 8vw, 8rem);
+  background-color: var(--game-background);
+}
+
+.game-media-gallery-header {
+  margin-bottom: var(--space-8);
+}
+
+.game-media-gallery-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Mixed-orientation grid strategy */
+.game-media-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* If multiple portrait shots exist, they can sit side-by-side on larger screens */
+@media (min-width: 768px) {
+  .game-media-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-8);
+  }
+}
+
+.game-media-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--game-accent) 15%, transparent);
+  background-color: color-mix(in srgb, var(--game-surface) 50%, black);
+}
+
+/* Landscape images span the full width of the grid row where possible */
+.game-media-gallery-item.is-landscape {
+  grid-column: 1 / -1;
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.game-media-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

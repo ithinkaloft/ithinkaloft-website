@@ -1,0 +1,52 @@
+.more-games {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  
+  /* 
+    This section sits OUTSIDE the GameThemeScope.
+    It relies entirely on global CSS variables (--bg-primary, --text-primary)
+    established in tokens.css, creating a studio-neutral boundary.
+  */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border);
+}
+
+.more-games-header {
+  margin-bottom: var(--space-12);
+  text-align: center;
+}
+
+.more-games-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-4);
+}
+
+.more-games-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.more-games-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .more-games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-10);
+  }
+}

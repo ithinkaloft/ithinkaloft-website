@@ -1,0 +1,86 @@
+.game-overview {
+  padding-block: clamp(5rem, 12vw, 10rem);
+  background-color: var(--game-background);
+  color: var(--game-text);
+}
+
+.game-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .game-overview-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-16);
+  }
+}
+
+/* Identity Column */
+.game-overview-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-overview-eyebrow {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.game-overview-rule {
+  flex-grow: 1;
+  height: 1px;
+  background-color: color-mix(in srgb, var(--game-text) 15%, transparent);
+  margin-left: var(--space-4);
+  max-width: 100px;
+}
+
+.game-overview-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--game-text);
+  margin: 0;
+  max-width: 18ch;
+}
+
+.game-overview-heading span {
+  display: inline-block;
+}
+
+/* Content Column */
+.game-overview-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .game-overview-content {
+    /* Push slightly down to align naturally with the H2's visual weight */
+    padding-top: var(--space-12); 
+  }
+}
+
+.game-overview-body {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--game-text) 85%, transparent);
+  max-width: 42rem;
+}
+
+.game-overview-body p {
+  margin: 0 0 var(--space-6) 0;
+}
+
+.game-overview-body p:last-child {
+  margin-bottom: 0;
+}

@@ -41,8 +41,8 @@ export default function FeaturedGame({ game }: FeaturedGameProps) {
             {game.media.hero ? (
               <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-lg)' }}>
                 <img 
-                  src={game.media.hero} 
-                  alt={`${game.title} gameplay showcasing ${game.shortDescription}`} 
+                  src={game.media.hero.src} 
+                  alt={game.media.hero.alt} 
                   className="featured-media-image"
                 />
                 <div className="featured-media-overlay" />

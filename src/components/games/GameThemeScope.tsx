@@ -6,11 +6,16 @@ interface GameThemeScopeProps {
   theme: GameTheme;
   children: React.ReactNode;
   className?: string;
+  'data-game'?: string;
 }
 
-export function GameThemeScope({ theme, children, className = '' }: GameThemeScopeProps) {
+export function GameThemeScope({ theme, children, className = '', 'data-game': dataGame }: GameThemeScopeProps) {
   return (
-    <div className={`game-theme-scope ${className}`.trim()} style={getGameThemeStyle(theme)}>
+    <div 
+      className={`game-theme-scope ${className}`.trim()} 
+      style={getGameThemeStyle(theme)}
+      data-game={dataGame}
+    >
       {children}
     </div>
   );

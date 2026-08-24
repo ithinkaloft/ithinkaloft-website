@@ -1,0 +1,165 @@
+.game-hero {
+  position: relative;
+  padding-top: clamp(5rem, 12vw, 9rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  
+  /* Themed atmosphere driven purely by variables */
+  background: radial-gradient(
+    circle at 75% 30%,
+    color-mix(in srgb, var(--game-accent) 12%, transparent),
+    transparent 45%
+  );
+  overflow: hidden;
+}
+
+/* Subtle top edge transition */
+.game-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--game-accent) 40%, transparent) 30%,
+    color-mix(in srgb, var(--game-accent) 40%, transparent) 70%,
+    transparent
+  );
+  opacity: 0.5;
+}
+
+.game-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .game-hero-grid {
+    grid-template-columns: 42fr 58fr;
+    gap: var(--space-16);
+  }
+}
+
+/* Content Area */
+.game-hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-hero-top-nav {
+  margin-bottom: var(--space-8);
+}
+
+.game-hero-back {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--ease-standard);
+}
+
+.game-hero-back:hover {
+  color: var(--game-text);
+}
+
+.game-hero-status {
+  margin-bottom: var(--space-4);
+}
+
+.game-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  margin: 0 0 var(--space-4) 0;
+  color: var(--game-text);
+  /* Handles long titles gracefully */
+  max-width: 15ch; 
+  overflow-wrap: break-word;
+}
+
+.game-hero-tagline {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--game-accent);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 38rem;
+}
+
+.game-hero-short-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--game-text) 80%, transparent);
+  margin: 0 0 var(--space-6) 0;
+  max-width: 36rem;
+}
+
+/* Metadata List */
+.game-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0 0 var(--space-8) 0;
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.game-hero-meta li {
+  display: flex;
+  align-items: center;
+}
+
+.game-hero-meta li:not(:last-child)::after {
+  content: '·';
+  margin-left: var(--space-3);
+  color: color-mix(in srgb, var(--game-text) 20%, transparent);
+}
+
+/* CTA Action */
+.game-hero-action {
+  margin-top: var(--space-2);
+}
+
+/* Media Area */
+.game-hero-media-wrapper {
+  width: 100%;
+}
+
+.game-hero-media {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background-color: color-mix(in srgb, var(--game-background) 80%, black);
+  border: 1px solid color-mix(in srgb, var(--game-accent) 15%, transparent);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 900px) {
+  .game-hero-media {
+    /* More cinematic ratio on desktop */
+    aspect-ratio: 16/10; 
+  }
+}
+
+.game-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

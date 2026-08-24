@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import type { Game } from '../../types/game';
 import { GameThemeScope } from './GameThemeScope';
 import StatusBadge from '../common/StatusBadge';
+import GameMediaFallback from './GameMediaFallback';
 import './GameCard.css';
 
 interface GameCardProps {
@@ -9,26 +10,21 @@ interface GameCardProps {
 }
 
 export default function GameCard({ game }: GameCardProps) {
+  const mediaSrc = game.media.thumbnail?.src || game.media.hero?.src;
+
   return (
     <GameThemeScope theme={game.theme}>
       <Link to={`/games/${game.slug}`} className="game-card" aria-label={`Explore ${game.title}`}>
         {/* Media / Visual */}
         <div className="game-card-media">
-          {game.media.thumbnail || game.media.hero ? (
+          {mediaSrc ? (
             <img 
-              src={game.media.thumbnail || game.media.hero} 
+              src={mediaSrc} 
               alt="" 
               className="game-card-image" 
             />
           ) : (
-            <div className="game-card-fallback">
-              <span className="game-card-fallback-text">
-                <span style={{ display: 'block', fontSize: '1rem', fontWeight: 700, marginBottom: '4px', fontFamily: 'var(--font-display)' }}>
-                  {game.title}
-                </span>
-                VISUAL PREVIEW
-              </span>
-            </div>
+            <GameMediaFallback title={game.title} />
           )}
         </div>
 

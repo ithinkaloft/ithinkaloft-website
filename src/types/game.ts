@@ -10,12 +10,22 @@ export interface GameStoreLinks {
   steam?: string;
 }
 
+
+
+export interface GameMediaImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 export interface GameMedia {
-  hero?: string;
-  thumbnail?: string;
-  screenshots: string[];
+  thumbnail?: GameMediaImage;
+  hero?: GameMediaImage;
+  screenshots?: GameMediaImage[];
   trailer?: string;
   video?: string;
+  logo?: string;
 }
 
 export interface GameTheme {
@@ -33,18 +43,43 @@ export interface GameSeo {
   image?: string;
 }
 
+export interface GameHighlight {
+  title: string;
+  description: string;
+}
+
+export interface GameAvailability {
+  label: string;
+  description?: string;
+  note?: string;
+}
+
+export interface GameOverviewData {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface GameMode {
+  name: string;
+  description?: string;
+}
+
 export interface Game {
   id: string;
   slug: string;
   title: string;
   tagline: string;
   shortDescription: string;
-  description: string;
-  features?: string[];
+  
+  overview: GameOverviewData;
+  genre?: string;
+  highlights?: GameHighlight[];
+  modes?: GameMode[];
   
   status: GameStatus;
   platforms: GamePlatform[];
   store?: GameStoreLinks;
+  availability?: GameAvailability;
   
   media: GameMedia;
   theme: GameTheme;

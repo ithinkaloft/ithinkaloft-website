@@ -1,0 +1,117 @@
+.ppa-experience {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  background-color: var(--game-background);
+  color: var(--game-text);
+}
+
+.ppa-exp-header {
+  margin-bottom: var(--space-12);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .ppa-exp-header {
+    text-align: center;
+  }
+}
+
+.ppa-exp-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--game-accent);
+  margin-bottom: var(--space-4);
+}
+
+.ppa-exp-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0;
+  color: var(--game-text);
+}
+
+/* Modular Tile Grid */
+.ppa-exp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 500px) {
+  .ppa-exp-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+/* Mode Tile */
+.ppa-exp-tile {
+  background-color: var(--game-surface);
+  border: 1px solid color-mix(in srgb, var(--game-accent) 15%, transparent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ppa-exp-tile-marker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.ppa-exp-marker-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--game-accent-secondary, var(--game-accent));
+}
+
+.ppa-exp-marker-line {
+  flex-grow: 1;
+  height: 1px;
+  max-width: 40px;
+  background-color: color-mix(in srgb, var(--game-accent) 20%, transparent);
+}
+
+.ppa-exp-mode-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--game-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.ppa-exp-mode-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--game-text) 80%, transparent);
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Footer Line */
+.ppa-exp-footer {
+  margin-top: var(--space-12);
+  text-align: center;
+  border-top: 1px solid color-mix(in srgb, var(--game-accent) 15%, transparent);
+  padding-top: var(--space-8);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.ppa-exp-footer p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--game-accent);
+  line-height: 1.5;
+  margin: 0;
+}

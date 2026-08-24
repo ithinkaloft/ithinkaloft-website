@@ -1,0 +1,163 @@
+.core-forge-experience {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  background-color: var(--game-background);
+  color: var(--game-text);
+}
+
+.cf-exp-header {
+  margin-bottom: var(--space-12);
+  max-width: 42rem;
+}
+
+.cf-exp-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--game-accent-secondary, var(--game-accent));
+  margin-bottom: var(--space-4);
+}
+
+.cf-exp-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0;
+  color: var(--game-text);
+}
+
+/* Base Flow layout (Mobile Vertical) */
+.cf-exp-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+.cf-exp-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cf-exp-step {
+  text-align: center;
+  padding: var(--space-6);
+  background: color-mix(in srgb, var(--game-surface) 60%, transparent);
+  border: 1px solid color-mix(in srgb, var(--game-accent) 15%, transparent);
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.cf-exp-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.cf-exp-number {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--game-accent);
+  opacity: 0.8;
+}
+
+.cf-exp-step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: var(--game-text);
+}
+
+.cf-exp-step-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--game-text) 80%, transparent);
+  margin: 0;
+}
+
+/* Vertical Connector (Mobile) */
+.cf-exp-connector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--space-8);
+  color: color-mix(in srgb, var(--game-accent) 50%, transparent);
+}
+
+.cf-exp-connector .cf-exp-arrow::before {
+  content: '↓';
+  font-family: var(--font-mono, monospace);
+  font-size: 1.25rem;
+}
+
+/* Desktop Flow Layout (Horizontal) */
+@media (min-width: 1024px) {
+  .cf-exp-flow {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: none;
+    gap: 0;
+  }
+  
+  .cf-exp-step-wrapper {
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+  }
+  
+  /* Make the step itself left-aligned */
+  .cf-exp-step {
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+  
+  .cf-exp-node {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: var(--space-4);
+  }
+  
+  /* Horizontal Connector */
+  .cf-exp-connector {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      90deg, 
+      color-mix(in srgb, var(--game-accent) 20%, transparent) 0%, 
+      color-mix(in srgb, var(--game-accent) 80%, transparent) 100%
+    );
+    margin-inline: var(--space-6);
+    position: relative;
+    /* Reset vertical height */
+    align-self: center;
+  }
+
+  .cf-exp-connector .cf-exp-arrow::before {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid color-mix(in srgb, var(--game-accent) 80%, transparent);
+  }
+}

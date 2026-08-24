@@ -10,7 +10,7 @@ interface GameLayoutProps {
 
 export function GameLayout({ game, children }: GameLayoutProps) {
   return (
-    <GameThemeScope theme={game.theme} className="game-layout">
+    <GameThemeScope theme={game.theme} className="game-detail" data-game={game.slug}>
       {children}
     </GameThemeScope>
   );
