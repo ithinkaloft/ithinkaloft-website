@@ -1,0 +1,113 @@
+.mobile-nav-container {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-header) + 50); /* Above everything else */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-nav-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: backdropFadeIn var(--motion-ui) forwards;
+}
+
+.mobile-nav-drawer {
+  position: relative;
+  width: min(84vw, 360px);
+  height: 100%;
+  background-color: var(--bg-secondary);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  animation: drawerSlideIn var(--motion-ui) forwards;
+}
+
+.mobile-nav-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--page-gutter);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.mobile-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: var(--space-2);
+  margin-right: calc(var(--space-2) * -1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.mobile-close-btn:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.mobile-nav-menu {
+  flex: 1;
+  padding: var(--space-8) var(--page-gutter);
+  overflow-y: auto;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.mobile-nav-link {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: var(--space-2) 0;
+  transition: color var(--motion-micro);
+}
+
+.mobile-nav-link.active {
+  color: var(--brand-primary);
+}
+
+.mobile-nav-link:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes drawerSlideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav-backdrop {
+    animation-duration: 0ms;
+  }
+  .mobile-nav-drawer {
+    animation-duration: 0ms;
+  }
+}

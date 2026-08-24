@@ -1,0 +1,77 @@
+:root {
+  /* =========================================
+     Color System (Dark Neutral Shell)
+     ========================================= */
+  --bg-primary: #090b0f;
+  --bg-secondary: #0e1117;
+  --surface: #141820;
+  --surface-elevated: #1a1f29;
+
+  --text-primary: #f5f7fa;
+  --text-secondary: #a7afbd;
+  --text-muted: #717a89;
+
+  --border: rgba(255, 255, 255, 0.09);
+
+  /* =========================================
+     ithinkaloft Brand Accent
+     ========================================= */
+  --brand-primary: #8b7cff;
+  --brand-light: #aaa0ff;
+  --brand-deep: #6657e8;
+
+  /* =========================================
+     Game Theme Inheritance (Defaults to Brand)
+     ========================================= */
+  --game-accent: var(--brand-primary);
+  --game-accent-secondary: var(--brand-light);
+  --game-background: var(--bg-primary);
+  --game-surface: var(--surface);
+  --game-text: var(--text-primary);
+
+  /* =========================================
+     Typography
+     ========================================= */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* =========================================
+     Spacing Scale
+     ========================================= */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-24: 6rem;    /* 96px */
+
+  /* =========================================
+     Layout & Radii
+     ========================================= */
+  --content-max: 1280px;
+  --page-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --z-header: 100;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* =========================================
+     Motion & Transitions
+     ========================================= */
+  --motion-micro: 150ms ease;
+  --motion-ui: 250ms ease;
+  --motion-reveal: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-micro: 0ms;
+    --motion-ui: 0ms;
+    --motion-reveal: 0ms;
+  }
+}

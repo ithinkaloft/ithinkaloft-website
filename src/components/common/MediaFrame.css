@@ -1,0 +1,51 @@
+.media-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--surface-elevated);
+}
+
+/* Enforce direct media children to fill the frame properly */
+.media-frame > img,
+.media-frame > picture,
+.media-frame > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ratios using aspect-ratio */
+.ratio-landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.ratio-portrait {
+  aspect-ratio: 9 / 16;
+}
+
+.ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+.ratio-cinematic {
+  aspect-ratio: 21 / 9;
+}
+
+/* Graceful fallback for older browsers without aspect-ratio support */
+@supports not (aspect-ratio: 1 / 1) {
+  .ratio-landscape::before { content: ""; display: block; padding-bottom: 56.25%; }
+  .ratio-portrait::before { content: ""; display: block; padding-bottom: 177.77%; }
+  .ratio-square::before { content: ""; display: block; padding-bottom: 100%; }
+  .ratio-cinematic::before { content: ""; display: block; padding-bottom: 42.85%; }
+
+  .media-frame > img,
+  .media-frame > picture,
+  .media-frame > video {
+    position: absolute;
+    inset: 0;
+  }
+}

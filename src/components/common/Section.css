@@ -1,0 +1,15 @@
+.site-section {
+  width: 100%;
+}
+
+.section-compact {
+  padding-block: clamp(2rem, 5vw, 3rem); /* ~32px to 48px */
+}
+
+.section-normal {
+  padding-block: clamp(3rem, 8vw, 6rem); /* ~48px to 96px */
+}
+
+.section-large {
+  padding-block: clamp(4rem, 12vw, 9rem); /* ~64px to 144px */
+}

@@ -1,0 +1,126 @@
+/* Skip to content link (accessibility) */
+.skip-to-content {
+  position: absolute;
+  top: calc(var(--space-2) * -10); /* Hide above viewport */
+  left: var(--page-gutter);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--brand-primary);
+  color: #fff;
+  z-index: calc(var(--z-header) + 10);
+  font-weight: 600;
+  border-radius: 4px;
+  transition: top var(--motion-micro);
+}
+
+.skip-to-content:focus {
+  top: var(--space-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-to-content {
+    transition: none;
+  }
+}
+
+/* Header container */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: rgba(9, 11, 15, 0.95); /* var(--bg-primary) with some opacity to test readability */
+  border-bottom: 1px solid var(--border);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure opaque enough reading if there's no backdrop-filter yet, though we are requested "no large glassmorphism effect" */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand Wordmark */
+.brand-logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  /* The logo doesn't need the active state color, it should remain neutral */
+}
+
+.brand-logo:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  /* Hidden on narrow screens - to be addressed properly in 2.4 */
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: block;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-8);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color var(--motion-micro);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link.active {
+  color: var(--brand-primary);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Mobile Nav Trigger */
+.mobile-nav-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: var(--space-2);
+  margin-right: calc(var(--space-2) * -1); /* Visually align with container edge */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.mobile-nav-trigger:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-trigger {
+    display: none;
+  }
+}
+

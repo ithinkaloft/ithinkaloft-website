@@ -1,0 +1,9 @@
+.game-layout {
+  min-height: 100dvh;
+  background-color: var(--game-background);
+  color: var(--game-text);
+  
+  /* Ensure children can stack naturally */
+  display: flex;
+  flex-direction: column;
+}

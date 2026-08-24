@@ -1,0 +1,121 @@
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: var(--space-12) 0;
+  margin-top: auto;
+  background-color: var(--bg-primary); /* Keeps it part of the page */
+}
+
+.footer-top-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 640px) {
+  .footer-top-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer-brand-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 320px;
+}
+
+.footer-brand-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  display: inline-block;
+}
+
+.footer-brand-logo:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
+}
+
+.footer-studio-line {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer-link {
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color var(--motion-micro);
+}
+
+.footer-link:hover {
+  color: var(--brand-primary);
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.footer-bottom-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 640px) {
+  .footer-bottom-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-copyright {
+  color: var(--text-muted);
+  font-size: 0.875rem; /* 14px equivalent */
+}
+
+.footer-social-links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.footer-social-link {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color var(--motion-micro);
+}
+
+.footer-social-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-social-link:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Adjust padding on very large screens */
+@media (min-width: 1024px) {
+  .site-footer {
+    padding: var(--space-16) 0 var(--space-12);
+  }
+}
