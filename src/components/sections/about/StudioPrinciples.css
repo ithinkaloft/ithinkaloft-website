@@ -57,6 +57,10 @@
   flex-direction: column;
 }
 
+/* Each item: border-top is the divider above.
+   padding-block-start  = breathing room ABOVE the heading.
+   padding-block-end    = breathing room BELOW the description before next divider.
+   Both are equal to create a metronomic rhythm. */
 .sp-item {
   display: flex;
   flex-direction: column;
@@ -71,24 +75,31 @@
 @media (min-width: 768px) {
   .sp-item {
     flex-direction: row;
+    align-items: flex-start; /* pin number to heading top, not row centroid */
     gap: var(--space-8);
-    padding-block: var(--space-10);
+    padding-block: clamp(2rem, 3.5vw, 2.75rem); /* generous, equal top + bottom */
   }
 }
 
 .sp-item-number {
   font-family: var(--font-mono, monospace);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--brand-primary);
-  margin-bottom: var(--space-4);
+  /* On mobile the number sits above the heading as its own row */
+  margin-bottom: var(--space-3);
   flex-shrink: 0;
+  /* Align number cap-height to heading cap-height.
+     The heading is ~1.4rem with no margin-top, so a small nudge brings the
+     number baseline in line without magic numbers. */
+  padding-top: 0.2em;
+  line-height: 1;
 }
 
 @media (min-width: 768px) {
   .sp-item-number {
     margin-bottom: 0;
-    width: 2rem;
+    width: 2.5rem; /* slightly wider gives the colon-grid feel */
   }
 }
 
@@ -97,17 +108,18 @@
 }
 
 .sp-item-title {
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 var(--space-4) 0;
+  margin: 0 0 var(--space-3) 0; /* tighter gap between title and description */
   color: var(--text-primary);
+  line-height: 1.1;
 }
 
 .sp-item-desc {
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  line-height: 1.6;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.65;
   color: var(--text-secondary);
   margin: 0;
   max-width: 38rem;

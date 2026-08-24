@@ -45,17 +45,13 @@ export default function PageMeta({
     // 4. Type
     setMetaTag('property', 'og:type', type);
 
-    // 5. Image (optional)
-    if (image) {
-      const imageUrl = image.startsWith('http') ? image : `${siteConfig.siteUrl}${image}`;
-      setMetaTag('property', 'og:image', imageUrl);
-      setMetaTag('name', 'twitter:image', imageUrl);
-      setMetaTag('name', 'twitter:card', 'summary_large_image');
-    } else {
-      removeMetaTag('property', 'og:image');
-      removeMetaTag('name', 'twitter:image');
-      setMetaTag('name', 'twitter:card', 'summary');
-    }
+    // 5. Image
+    const fallbackImage = `${siteConfig.siteUrl}/src/assets/brand/web/ithinkaloft-og-1200x630.webp`;
+    const finalImage = image ? (image.startsWith('http') ? image : `${siteConfig.siteUrl}${image}`) : fallbackImage;
+
+    setMetaTag('property', 'og:image', finalImage);
+    setMetaTag('name', 'twitter:image', finalImage);
+    setMetaTag('name', 'twitter:card', 'summary_large_image');
 
     // 6. Robots / Indexing
     if (noIndex) {

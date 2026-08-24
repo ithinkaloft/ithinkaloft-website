@@ -15,8 +15,16 @@ export default function Header() {
       </a>
       <header className="site-header">
         <Container className="header-container">
-          <NavLink to="/" className="brand-logo" end>
-            ithinkaloft
+          <NavLink to="/" className="brand-logo" end aria-label="ithinkaloft home">
+            <img 
+              src="/src/assets/brand/web/ithinkaloft-wordmark.webp" 
+              alt="ithinkaloft" 
+              width="807" 
+              height="133" 
+              className="brand-logo-img"
+              loading="eager"
+              fetchPriority="high"
+            />
           </NavLink>
           
           {/* Desktop Navigation */}

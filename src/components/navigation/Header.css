@@ -44,17 +44,27 @@
 
 /* Brand Wordmark */
 .brand-logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  /* The logo doesn't need the active state color, it should remain neutral */
+  display: flex;
+  align-items: center;
+  /* Remove old text styles */
+}
+
+.brand-logo-img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .brand-logo-img {
+    height: 24px;
+  }
 }
 
 .brand-logo:focus-visible {
   outline: 2px solid var(--brand-primary);
   outline-offset: 4px;
+  border-radius: 2px;
 }
 
 /* Desktop Navigation */
