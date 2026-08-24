@@ -7,6 +7,7 @@ Unless otherwise specified, all branding, artwork, code, and game-specific asset
 
 This explicitly includes:
 - **CORE FORGE**: Logo, reactor artwork, energy chamber graphics, and all gameplay screenshots.
+- **Pocket Puzzle Arcade**: App icon (`Pocket_icon_512.png`), feature graphic (`Pocket-Puzzle-Arcade-Feature-Graphic-1024x500.png`), and seven gameplay screenshots (`01_Home`, `02_Sliding_Tile`, `03_2048`, `04_Block_Drop`, `06_Snake`, `07_Minesweeper`, `08_Sudoku`). WebP derivatives in `src/assets/games/pocket-puzzle-arcade/web/` are optimized outputs derived from those first-party masters.
 
 ## Third-Party Assets
 

@@ -31,7 +31,7 @@ export default function GameMediaGallery({ game }: GameMediaGalleryProps) {
               </span>
             </div>
 
-            <div className="game-media-gallery-grid">
+            <div className={`game-media-gallery-grid${items.every(s => (s.height || 1) > (s.width || 1)) ? ' has-portrait-dominant' : ''}`}>
               {items.map((screenshot, idx) => {
                 const w = screenshot.width || 1;
                 const h = screenshot.height || 1;

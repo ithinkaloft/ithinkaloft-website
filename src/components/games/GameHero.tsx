@@ -72,26 +72,31 @@ export default function GameHero({ game }: GameHeroProps) {
           <div className="game-hero-media-wrapper">
             <Reveal delay={160}>
               <div className="game-hero-media">
-                {game.media.hero ? (
-                  <picture>
-                    {game.media.hero.sources?.map((source) => (
-                      <source 
-                        key={source.width} 
-                        srcSet={source.src} 
-                        media={`(max-width: ${source.width}px)`} 
+                {game.media.hero ? (() => {
+                  const isPortrait = (game.media.hero.height || 0) > (game.media.hero.width || 0);
+                  const objectPos  = isPortrait ? 'center 60%' : 'center center';
+                  return (
+                    <picture>
+                      {game.media.hero.sources?.map((source) => (
+                        <source 
+                          key={source.width} 
+                          srcSet={source.src} 
+                          media={`(max-width: ${source.width}px)`} 
+                        />
+                      ))}
+                      <img 
+                        src={game.media.hero.src} 
+                        alt={game.media.hero.alt || `${game.title} hero artwork`} 
+                        className="game-hero-image"
+                        style={{ objectPosition: objectPos }}
+                        width={game.media.hero.width}
+                        height={game.media.hero.height}
+                        loading="eager"
+                        fetchPriority="high"
                       />
-                    ))}
-                    <img 
-                      src={game.media.hero.src} 
-                      alt={game.media.hero.alt || `${game.title} hero artwork`} 
-                      className="game-hero-image"
-                      width={game.media.hero.width}
-                      height={game.media.hero.height}
-                      loading="eager"
-                      fetchPriority="high"
-                    />
-                  </picture>
-                ) : mediaSrc ? (
+                    </picture>
+                  );
+                })() : mediaSrc ? (
                   <img src={mediaSrc} alt={`${game.title} hero artwork`} className="game-hero-image" />
                 ) : (
                   <GameMediaFallback title={game.title} />

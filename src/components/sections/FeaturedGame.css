@@ -161,11 +161,16 @@
 .featured-media-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9; /* Enforce an aspect ratio if the image is portrait but we want a landscape crop here, or let the image dictate it. Wait, the original was a tall portrait (841x1870). We should probably constrain its height or aspect ratio on desktop. Let's use an aspect ratio */
+  aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: var(--radius-lg);
   border: 1px solid color-mix(in srgb, var(--game-text) 10%, transparent);
   z-index: 2;
+}
+
+/* Same display:contents fix as GameHero — picture is inline by default */
+.featured-media-image-container picture {
+  display: contents;
 }
 
 /* Real Image Media */
@@ -173,7 +178,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 60%; /* Shifted down to reveal more circular core */
+  /* object-position applied inline per-game based on portrait/landscape orientation */
   transition: transform 0.4s ease-out;
 }
 

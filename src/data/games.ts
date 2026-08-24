@@ -109,24 +109,32 @@ export const games: Game[] = [
     ],
     modes: [
       {
-        name: 'Sliding Puzzle',
-        description: 'Rearrange the board and restore the pattern.'
+        name: 'Sliding Tile',
+        description: 'Restore the board, one move at a time.'
       },
       {
-        name: 'Snake',
-        description: 'Navigate the grid, grow your tail, and avoid the walls.'
-      },
-      {
-        name: 'Memory Match',
-        description: 'Find the hidden pairs before time runs out.'
+        name: '2048',
+        description: 'Merge matching tiles and chase a higher score.'
       },
       {
         name: 'Block Drop',
-        description: 'Fit the shapes and clear the lines.'
+        description: 'Fit falling pieces and clear the lines.'
       },
       {
-        name: 'Color Connect',
-        description: 'Link matching nodes without crossing paths.'
+        name: 'Tic-Tac-Toe',
+        description: 'Read the board and find three in a row.'
+      },
+      {
+        name: 'Snake',
+        description: 'Navigate the grid, grow and survive.'
+      },
+      {
+        name: 'Minesweeper',
+        description: 'Clear the field without triggering a mine.'
+      },
+      {
+        name: 'Sudoku',
+        description: 'Complete the grid through logic and deduction.'
       }
     ],
     platforms: [{ name: 'Android' }],
@@ -138,7 +146,38 @@ export const games: Game[] = [
       description: 'Ready for another puzzle?',
       note: 'Pocket Puzzle Arcade is available on Android.'
     },
-    media: {},
+    media: {
+      hero: {
+        src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-1024.webp',
+        alt: 'Pocket Puzzle Arcade collection featuring seven classic puzzle games',
+        width: 1024,
+        height: 500,
+        sources: [
+          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-1024.webp', width: 1024 },
+          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-768.webp',  width: 768 },
+          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-512.webp',  width: 512 }
+        ]
+      },
+      thumbnail: {
+        src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-889.webp',
+        alt: 'Pocket Puzzle Arcade — a collection of classic puzzle games',
+        width: 889,
+        height: 500,
+        sources: [
+          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-889.webp', width: 889 },
+          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-640.webp', width: 640 }
+        ]
+      },
+      screenshots: [
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-home.webp',          alt: 'Pocket Puzzle Arcade game selection screen',            width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-sliding-tile.webp',  alt: 'Sliding Tile gameplay in Pocket Puzzle Arcade',          width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-2048.webp',          alt: '2048 gameplay in Pocket Puzzle Arcade',                  width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-block-drop.webp',    alt: 'Block Drop gameplay in Pocket Puzzle Arcade',            width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-snake.webp',         alt: 'Snake gameplay in Pocket Puzzle Arcade',                 width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-minesweeper.webp',   alt: 'Minesweeper gameplay in Pocket Puzzle Arcade',           width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-sudoku.webp',        alt: 'Sudoku gameplay in Pocket Puzzle Arcade',                width: 540, height: 960, category: 'Arcade Collection' }
+      ]
+    },
     theme: {
       mode: 'light',
       accent: '#a98cff',
@@ -150,6 +189,7 @@ export const games: Game[] = [
     seo: {
       title: 'Pocket Puzzle Arcade',
       description: 'A vibrant collection of satisfying and approachable puzzle challenges.',
+      image: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-og-1200x630.webp'
     }
   }
 ];

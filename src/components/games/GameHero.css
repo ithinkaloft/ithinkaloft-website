@@ -161,6 +161,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 60%;
   display: block;
+  /* object-position is applied per-game via inline style based on orientation */
+}
+
+/* picture is display:inline by default — height:100% on the img would resolve
+   to the intrinsic image height rather than the container. display:contents
+   makes picture transparent to layout so the img sees .game-hero-media directly. */
+.game-hero-media picture {
+  display: contents;
 }
