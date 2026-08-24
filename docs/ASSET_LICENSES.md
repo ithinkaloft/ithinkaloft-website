@@ -6,9 +6,9 @@ This document records the origin and usage rights for any third-party assets (fo
 Unless otherwise specified, all branding, artwork, code, and game-specific assets are original creations of ithinkaloft and remain the sole property of the studio.
 
 This explicitly includes:
-- **ithinkaloft Brand Identity**: The master logo (`src/assets/brand/ithinkaloft-logo.png`) and all its derivatives (wordmark, full logo, symbol, favicons, OG image).
+- **ithinkaloft Brand Identity**: The master logo (`public/assets/brand/ithinkaloft-logo.png`) and all its derivatives (wordmark, full logo, symbol, favicons, OG image).
 - **CORE FORGE**: Logo, reactor artwork, energy chamber graphics, and all gameplay screenshots.
-- **Pocket Puzzle Arcade**: App icon (`Pocket_icon_512.png`), feature graphic (`Pocket-Puzzle-Arcade-Feature-Graphic-1024x500.png`), and seven gameplay screenshots (`01_Home`, `02_Sliding_Tile`, `03_2048`, `04_Block_Drop`, `06_Snake`, `07_Minesweeper`, `08_Sudoku`). WebP derivatives in `src/assets/games/pocket-puzzle-arcade/web/` are optimized outputs derived from those first-party masters.
+- **Pocket Puzzle Arcade**: App icon (`Pocket_icon_512.png`), feature graphic (`Pocket-Puzzle-Arcade-Feature-Graphic-1024x500.png`), and seven gameplay screenshots (`01_Home`, `02_Sliding_Tile`, `03_2048`, `04_Block_Drop`, `06_Snake`, `07_Minesweeper`, `08_Sudoku`). WebP derivatives in `public/assets/games/pocket-puzzle-arcade/web/` are optimized outputs derived from those first-party masters.
 
 ## Third-Party Assets
 

@@ -46,7 +46,7 @@ export default function PageMeta({
     setMetaTag('property', 'og:type', type);
 
     // 5. Image
-    const fallbackImage = `${siteConfig.siteUrl}/src/assets/brand/web/ithinkaloft-og-1200x630.webp`;
+    const fallbackImage = `${siteConfig.siteUrl}/assets/brand/web/ithinkaloft-og-1200x630.webp`;
     const finalImage = image ? (image.startsWith('http') ? image : `${siteConfig.siteUrl}${image}`) : fallbackImage;
 
     setMetaTag('property', 'og:image', finalImage);

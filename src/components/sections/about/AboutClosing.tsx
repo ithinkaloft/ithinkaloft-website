@@ -9,7 +9,7 @@ export default function AboutClosing() {
         <div className="about-closing-content">
           <div className="about-closing-brand">
             <img 
-              src="/src/assets/brand/web/ithinkaloft-logo.webp" 
+              src="/assets/brand/web/ithinkaloft-logo.webp" 
               alt="ithinkaloft studio" 
               width="807" 
               height="505" 

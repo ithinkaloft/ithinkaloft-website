@@ -38,33 +38,33 @@ export const games: Game[] = [
     },
     media: {
       hero: {
-        src: '/src/assets/games/core-forge/web/core-forge-hero-1600.webp',
+        src: '/assets/games/core-forge/web/core-forge-hero-1600.webp',
         alt: 'Atmospheric reactor chamber of the CORE FORGE facility',
         width: 1600,
         height: 3557, // 1600 * 1870 / 841
         sources: [
-          { src: '/src/assets/games/core-forge/web/core-forge-hero-1600.webp', width: 1600 },
-          { src: '/src/assets/games/core-forge/web/core-forge-hero-1200.webp', width: 1200 },
-          { src: '/src/assets/games/core-forge/web/core-forge-hero-800.webp', width: 800 }
+          { src: '/assets/games/core-forge/web/core-forge-hero-1600.webp', width: 1600 },
+          { src: '/assets/games/core-forge/web/core-forge-hero-1200.webp', width: 1200 },
+          { src: '/assets/games/core-forge/web/core-forge-hero-800.webp', width: 800 }
         ]
       },
       thumbnail: {
-        src: '/src/assets/games/core-forge/web/core-forge-thumbnail-960.webp',
+        src: '/assets/games/core-forge/web/core-forge-thumbnail-960.webp',
         alt: 'Four colored energy systems feeding the CORE FORGE machinery',
         width: 960,
         height: 540,
         sources: [
-          { src: '/src/assets/games/core-forge/web/core-forge-thumbnail-960.webp', width: 960 },
-          { src: '/src/assets/games/core-forge/web/core-forge-thumbnail-640.webp', width: 640 }
+          { src: '/assets/games/core-forge/web/core-forge-thumbnail-960.webp', width: 960 },
+          { src: '/assets/games/core-forge/web/core-forge-thumbnail-640.webp', width: 640 }
         ]
       },
       screenshots: [
-        { src: '/src/assets/games/core-forge/web/gameplay-wave.webp', alt: 'CORE FORGE gameplay showing the sorting puzzle, weapon systems and automated enemies.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/src/assets/games/core-forge/web/gameplay-boss-crusher.webp', alt: 'Crusher boss encounter during Sector 1 of CORE FORGE.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/src/assets/games/core-forge/web/weapon-fusion.webp', alt: 'Weapon Fusion choices including Cryo Burst, Toxic Surge and Frozen Plague.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/src/assets/games/core-forge/web/facility-ai-alert.webp', alt: 'Facility AI security alert introducing the automated defense takeover.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/src/assets/games/core-forge/web/opening-directive.webp', alt: 'Four energy systems feeding the CORE FORGE facility machinery.', width: 1024, height: 1536, category: 'World & Systems' },
-        { src: '/src/assets/games/core-forge/web/opening-threat.webp', alt: 'Automated machines occupying a hostile CORE FORGE facility sector.', width: 1024, height: 1536, category: 'World & Systems' }
+        { src: '/assets/games/core-forge/web/gameplay-wave.webp', alt: 'CORE FORGE gameplay showing the sorting puzzle, weapon systems and automated enemies.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/assets/games/core-forge/web/gameplay-boss-crusher.webp', alt: 'Crusher boss encounter during Sector 1 of CORE FORGE.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/assets/games/core-forge/web/weapon-fusion.webp', alt: 'Weapon Fusion choices including Cryo Burst, Toxic Surge and Frozen Plague.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/assets/games/core-forge/web/facility-ai-alert.webp', alt: 'Facility AI security alert introducing the automated defense takeover.', width: 727, height: 1510, category: 'Gameplay' },
+        { src: '/assets/games/core-forge/web/opening-directive.webp', alt: 'Four energy systems feeding the CORE FORGE facility machinery.', width: 1024, height: 1536, category: 'World & Systems' },
+        { src: '/assets/games/core-forge/web/opening-threat.webp', alt: 'Automated machines occupying a hostile CORE FORGE facility sector.', width: 1024, height: 1536, category: 'World & Systems' }
       ]
     },
     theme: {
@@ -78,7 +78,7 @@ export const games: Game[] = [
     seo: {
       title: 'CORE FORGE',
       description: 'An atmospheric puzzle game blending satisfying mechanics with deep progression.',
-      image: '/src/assets/games/core-forge/web/core-forge-og-1200x630.webp'
+      image: '/assets/games/core-forge/web/core-forge-og-1200x630.webp'
     },
     featured: true
   },
@@ -148,34 +148,34 @@ export const games: Game[] = [
     },
     media: {
       hero: {
-        src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-1024.webp',
+        src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-1024.webp',
         alt: 'Pocket Puzzle Arcade collection featuring seven classic puzzle games',
         width: 1024,
         height: 500,
         sources: [
-          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-1024.webp', width: 1024 },
-          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-768.webp',  width: 768 },
-          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-512.webp',  width: 512 }
+          { src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-1024.webp', width: 1024 },
+          { src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-768.webp',  width: 768 },
+          { src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-hero-512.webp',  width: 512 }
         ]
       },
       thumbnail: {
-        src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-889.webp',
+        src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-889.webp',
         alt: 'Pocket Puzzle Arcade — a collection of classic puzzle games',
         width: 889,
         height: 500,
         sources: [
-          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-889.webp', width: 889 },
-          { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-640.webp', width: 640 }
+          { src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-889.webp', width: 889 },
+          { src: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-thumbnail-640.webp', width: 640 }
         ]
       },
       screenshots: [
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-home.webp',          alt: 'Pocket Puzzle Arcade game selection screen',            width: 540, height: 960, category: 'Arcade Collection' },
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-sliding-tile.webp',  alt: 'Sliding Tile gameplay in Pocket Puzzle Arcade',          width: 540, height: 960, category: 'Arcade Collection' },
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-2048.webp',          alt: '2048 gameplay in Pocket Puzzle Arcade',                  width: 540, height: 960, category: 'Arcade Collection' },
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-block-drop.webp',    alt: 'Block Drop gameplay in Pocket Puzzle Arcade',            width: 540, height: 960, category: 'Arcade Collection' },
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-snake.webp',         alt: 'Snake gameplay in Pocket Puzzle Arcade',                 width: 540, height: 960, category: 'Arcade Collection' },
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-minesweeper.webp',   alt: 'Minesweeper gameplay in Pocket Puzzle Arcade',           width: 540, height: 960, category: 'Arcade Collection' },
-        { src: '/src/assets/games/pocket-puzzle-arcade/web/pocket-sudoku.webp',        alt: 'Sudoku gameplay in Pocket Puzzle Arcade',                width: 540, height: 960, category: 'Arcade Collection' }
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-home.webp',          alt: 'Pocket Puzzle Arcade game selection screen',            width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-sliding-tile.webp',  alt: 'Sliding Tile gameplay in Pocket Puzzle Arcade',          width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-2048.webp',          alt: '2048 gameplay in Pocket Puzzle Arcade',                  width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-block-drop.webp',    alt: 'Block Drop gameplay in Pocket Puzzle Arcade',            width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-snake.webp',         alt: 'Snake gameplay in Pocket Puzzle Arcade',                 width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-minesweeper.webp',   alt: 'Minesweeper gameplay in Pocket Puzzle Arcade',           width: 540, height: 960, category: 'Arcade Collection' },
+        { src: '/assets/games/pocket-puzzle-arcade/web/pocket-sudoku.webp',        alt: 'Sudoku gameplay in Pocket Puzzle Arcade',                width: 540, height: 960, category: 'Arcade Collection' }
       ]
     },
     theme: {
@@ -189,7 +189,7 @@ export const games: Game[] = [
     seo: {
       title: 'Pocket Puzzle Arcade',
       description: 'A vibrant collection of satisfying and approachable puzzle challenges.',
-      image: '/src/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-og-1200x630.webp'
+      image: '/assets/games/pocket-puzzle-arcade/web/pocket-puzzle-arcade-og-1200x630.webp'
     }
   }
 ];

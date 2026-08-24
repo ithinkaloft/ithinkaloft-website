@@ -106,7 +106,7 @@ export default function MobileNavigation({ isOpen, onClose, triggerRef }: Mobile
       >
         <div className="mobile-nav-header">
           <img 
-            src="/src/assets/brand/web/ithinkaloft-wordmark.webp" 
+            src="/assets/brand/web/ithinkaloft-wordmark.webp" 
             alt="ithinkaloft" 
             width="807" 
             height="133" 
