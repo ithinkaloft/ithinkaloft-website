@@ -105,7 +105,14 @@ export default function MobileNavigation({ isOpen, onClose, triggerRef }: Mobile
         aria-label="Mobile navigation"
       >
         <div className="mobile-nav-header">
-          <span className="brand-logo-text">ithinkaloft</span>
+          <img 
+            src="/src/assets/brand/web/ithinkaloft-wordmark.webp" 
+            alt="ithinkaloft" 
+            width="807" 
+            height="133" 
+            className="brand-logo-img"
+            loading="lazy"
+          />
           <button 
             className="mobile-close-btn" 
             onClick={onClose}
