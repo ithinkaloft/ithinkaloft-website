@@ -13,14 +13,27 @@
   align-items: center;
 }
 
-.about-closing-eyebrow {
+.about-closing-brand {
+  width: 100%;
+  max-width: 320px;
+  margin-inline: auto;
+  margin-bottom: var(--space-10);
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .about-closing-brand {
+    margin-bottom: var(--space-12);
+  }
+}
+
+.about-closing-logo {
+  width: 100%;
+  height: auto;
   display: block;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--brand-primary);
-  margin-bottom: var(--space-8);
+  /* Extremely subtle shadow just to gently ground it */
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
 }
 
 .about-closing-title {

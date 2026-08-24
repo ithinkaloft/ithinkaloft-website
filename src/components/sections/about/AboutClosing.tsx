@@ -7,9 +7,16 @@ export default function AboutClosing() {
     <section className="about-closing">
       <Container>
         <div className="about-closing-content">
-          <span className="about-closing-eyebrow" aria-hidden="true">
-            ITHINKALOFT
-          </span>
+          <div className="about-closing-brand">
+            <img 
+              src="/src/assets/brand/web/ithinkaloft-logo.webp" 
+              alt="ithinkaloft studio" 
+              width="807" 
+              height="505" 
+              className="about-closing-logo" 
+              loading="lazy"
+            />
+          </div>
           <h2 className="about-closing-title">
             Different game.<br aria-hidden="true" />
             Same studio.
