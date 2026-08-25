@@ -1,5 +1,5 @@
 .page-privacy {
-  padding-block: clamp(6rem, 15vw, 10rem) var(--space-16);
+  padding-block: clamp(3rem, 5vw, 5rem) var(--space-16);
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }

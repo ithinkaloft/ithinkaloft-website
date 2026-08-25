@@ -1,7 +1,7 @@
 .about-hero {
   /* Slightly shorter than full viewport */
   min-height: clamp(30rem, 68dvh, 46rem);
-  padding-block: clamp(6rem, 15vw, 12rem) clamp(4rem, 8vw, 6rem);
+  padding-block: clamp(3rem, 5vw, 5rem) clamp(4rem, 8vw, 6rem);
   background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
 .game-hero {
   position: relative;
-  padding-top: clamp(5rem, 12vw, 9rem);
+  width: 100%;
+  padding-top: clamp(3rem, 5vw, 5rem);
   padding-bottom: clamp(4rem, 8vw, 8rem);
   
   /* Themed atmosphere driven purely by variables */

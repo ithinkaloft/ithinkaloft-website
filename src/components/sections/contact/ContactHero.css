@@ -1,5 +1,5 @@
 .contact-hero {
-  padding-block: clamp(6rem, 15vw, 10rem) var(--space-8);
+  padding-block: clamp(3rem, 5vw, 5rem) 0;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }

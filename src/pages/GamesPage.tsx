@@ -14,7 +14,7 @@ export default function GamesPage() {
         description="Games built with care, each with a world of its own. Explore the ithinkaloft catalogue."
         path="/games"
       />
-      <Section spacing="large" style={{ paddingTop: 'clamp(6rem, 15vw, 10rem)' }}>
+      <Section spacing="large" style={{ paddingTop: 'clamp(3rem, 5vw, 5rem)' }}>
         <Container>
           <Reveal delay={0}>
             <header style={{ marginBottom: 'var(--space-12)' }}>

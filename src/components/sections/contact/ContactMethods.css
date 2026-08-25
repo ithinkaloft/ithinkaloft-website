@@ -1,5 +1,5 @@
 .contact-methods {
-  padding-block: var(--space-8) clamp(6rem, 15vw, 12rem);
+  padding-block: var(--space-4) clamp(3rem, 5vw, 5rem);
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -12,7 +12,7 @@
 .contact-method-block {
   display: flex;
   flex-direction: column;
-  padding-block: var(--space-10);
+  padding-block: var(--space-6);
   border-top: 1px solid var(--border);
 }
 
