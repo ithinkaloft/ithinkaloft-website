@@ -1,14 +1,24 @@
 import Container from '../common/Container';
 import { ButtonLink } from '../common/Button';
-import BrandMotif from '../brand/BrandMotif';
 import './HomeHero.css';
 
 export default function HomeHero() {
   return (
     <section className="home-hero">
+      {/* Background Montage Image */}
+      <div className="home-hero-image-wrapper hero-stagger" style={{ animationDelay: '100ms' }}>
+        <img 
+          src="/assets/brand/web/home-hero-montage.webp" 
+          alt="Montage of ithinkaloft game worlds and concepts" 
+          className="home-hero-image"
+          width="1024"
+          height="530"
+          decoding="async"
+        />
+      </div>
+
       <Container className="home-hero-layout">
-        
-        {/* Left Side: Content */}
+        {/* Content */}
         <div className="home-hero-content">
           <span className="home-hero-eyebrow hero-stagger">
             Independent Game Studio
@@ -25,12 +35,6 @@ export default function HomeHero() {
             </ButtonLink>
           </div>
         </div>
-
-        {/* Right Side / Background: Motif */}
-        <div className="home-hero-motif-wrapper">
-          <BrandMotif />
-        </div>
-        
       </Container>
     </section>
   );
