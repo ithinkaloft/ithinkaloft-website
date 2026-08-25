@@ -6,7 +6,10 @@ import './AboutHero.css';
 export default function AboutHero() {
   return (
     <section className="about-hero">
-      <Container>
+      {/* Absolute integrated background with synchronized animated ring */}
+      <AboutMotif />
+
+      <Container style={{ position: 'relative', zIndex: 1 }}>
         <div className="about-hero-grid">
           
           <div className="about-hero-content">
@@ -31,11 +34,8 @@ export default function AboutHero() {
             </Reveal>
           </div>
 
-          <div className="about-hero-visual">
-            <Reveal delay={200}>
-              <AboutMotif />
-            </Reveal>
-          </div>
+          {/* Empty spacer to maintain the grid layout structure for the text */}
+          <div className="about-hero-spacer"></div>
           
         </div>
       </Container>

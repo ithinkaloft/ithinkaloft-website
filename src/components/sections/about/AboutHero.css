@@ -1,11 +1,13 @@
 .about-hero {
+  position: relative;
   /* Slightly shorter than full viewport */
-  min-height: clamp(30rem, 68dvh, 46rem);
+  min-height: clamp(34rem, 78dvh, 46rem);
   padding-block: clamp(3rem, 5vw, 5rem) clamp(4rem, 8vw, 6rem);
   background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden; /* Ensure motif doesn't overflow */
 }
 
 .about-hero-grid {

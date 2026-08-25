@@ -7,6 +7,6 @@ export const siteConfig = {
   locale: 'en_IN',
   contact: {
     general: 'ithinkaloft.games@gmail.com',
-    support: '', // e.g. support@ithinkaloft.com
+    support: 'ithinkaloft.games@gmail.com', // e.g. support@ithinkaloft.com
   }
 };

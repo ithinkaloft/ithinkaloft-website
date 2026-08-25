@@ -1,10 +1,13 @@
 .about-motif {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  max-width: 500px;
-  aspect-ratio: 1;
-  margin-inline: auto;
-  opacity: 0.8;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .about-motif-svg {
@@ -13,47 +16,9 @@
   overflow: visible;
 }
 
-/* Dots: Subtle, ambient pulse/drift */
-.about-motif-dot {
-  fill: var(--text-secondary);
-  animation: about-dot-drift 12s ease-in-out infinite alternate;
-}
-
-.dot-1 { animation-delay: 0s; }
-.dot-2 { animation-delay: -4s; }
-.dot-3 { animation-delay: -8s; }
-
-@keyframes about-dot-drift {
-  0% { transform: translate(0, 0); opacity: 0.2; }
-  50% { opacity: 0.6; }
-  100% { transform: translate(15px, -15px); opacity: 0.2; }
-}
-
-/* Horizontal structure lines */
-.about-motif-line {
-  stroke: url(#about-line-grad);
-  stroke-width: 1;
-  stroke-dasharray: 400;
-  stroke-dashoffset: 0;
-  animation: about-line-breathe 8s ease-in-out infinite alternate;
-}
-
-.line-1 { animation-delay: 0s; }
-.line-2 { 
-  stroke: url(#about-line-grad);
-  transform-origin: center;
-  transform: scaleX(-1); /* Reverse gradient direction */
-  animation-delay: -4s; 
-}
-
-@keyframes about-line-breathe {
-  0% { stroke-dashoffset: 200; opacity: 0.3; }
-  100% { stroke-dashoffset: 0; opacity: 0.8; }
-}
-
 /* Incomplete Ring */
 .about-motif-ring {
-  transform-origin: 200px 200px;
+  transform-origin: 0 0;
   animation: about-ring-rotate 40s linear infinite;
 }
 
@@ -72,28 +37,9 @@
   transform: rotate(45deg);
 }
 
-/* Diagonal Struts */
-.about-motif-strut {
-  stroke: var(--text-muted);
-  stroke-width: 1;
-  stroke-dasharray: 4 4;
-  opacity: 0.4;
-}
-
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
-  .about-motif-dot,
-  .about-motif-line,
   .about-motif-ring {
     animation: none !important;
-  }
-  
-  .about-motif-line {
-    stroke-dashoffset: 0 !important;
-    opacity: 0.6 !important;
-  }
-  
-  .about-motif-dot {
-    opacity: 0.5 !important;
   }
 }
