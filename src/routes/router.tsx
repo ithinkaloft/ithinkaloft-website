@@ -6,6 +6,7 @@ import GameDetailPage from '../pages/GameDetailPage';
 import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
 import PrivacyPage from '../pages/PrivacyPage';
+import CoreForgePrivacyPage from '../pages/CoreForgePrivacyPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 export const router = createBrowserRouter([
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: 'privacy',
         element: <PrivacyPage />,
+      },
+      {
+        path: 'privacy/core-forge',
+        element: <CoreForgePrivacyPage />,
       },
       {
         path: '*',
