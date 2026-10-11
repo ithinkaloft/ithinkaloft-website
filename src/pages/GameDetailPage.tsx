@@ -5,7 +5,7 @@ import { GameLayout } from '../layouts/GameLayout';
 import GameHero from '../components/games/GameHero';
 import GameOverview from '../components/games/GameOverview';
 import GameHighlights from '../components/games/GameHighlights';
-import CoreForgeExperience from '../components/games/details/CoreForgeExperience';
+import SortingWarExperience from '../components/games/details/SortingWarExperience';
 import PocketPuzzleArcadeExperience from '../components/games/details/PocketPuzzleArcadeExperience';
 import GameMediaGallery from '../components/games/GameMediaGallery';
 import GameAvailability from '../components/games/GameAvailability';
@@ -14,9 +14,10 @@ import PageMeta from '../components/common/PageMeta';
 import type { Game } from '../types/game';
 
 import React from 'react';
+import SortingWarShowcase from '../components/games/details/SortingWarShowcase';
 
 const gameSpecificExperiences: Record<string, React.FC<{ game: Game }>> = {
-  'core-forge': () => <CoreForgeExperience />,
+  'sorting-war': () => <SortingWarExperience />,
   'pocket-puzzle-arcade': (props) => <PocketPuzzleArcadeExperience {...props} />,
 };
 
@@ -41,9 +42,9 @@ export default function GameDetailPage() {
         path={`/games/${game.slug}`}
         image={game.seo.image}
       />
-      <GameLayout game={game}>
+      <div className={game.slug === 'sorting-war' ? 'sw-game' : ''}><GameLayout game={game}>
         {/* Game Hero */}
-        <GameHero game={game} />
+        {game.slug === 'sorting-war' ? <SortingWarShowcase /> : <GameHero game={game} />}
 
         {/* Game Overview */}
         <GameOverview game={game} />
@@ -59,7 +60,8 @@ export default function GameDetailPage() {
 
         {/* Game Availability */}
         <GameAvailability game={game} />
-      </GameLayout>
+        {game.slug === 'sorting-war' && <p style={{textAlign: 'center', padding: '0 20px 36px'}}><a href="/privacy/sorting-war" style={{color: '#c7b48f', fontSize: '13px'}}>Sorting War privacy policy</a></p>}
+      </GameLayout></div>
 
       {/* More Games sits outside GameLayout to return to the studio theme */}
       <MoreGames currentGame={game} />

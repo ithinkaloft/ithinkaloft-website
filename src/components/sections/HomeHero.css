@@ -119,3 +119,19 @@
     transform: none;
   }
 }
+
+/* Keep both slides in one stable frame, with the original studio art first. */
+.home-hero-carousel{min-height:clamp(36rem,78dvh,52rem);padding:64px 0 120px;isolation:isolate}
+.home-slide-image{position:absolute;inset:0;opacity:0;transition:opacity 800ms ease;pointer-events:none}
+.home-slide-image.is-active{opacity:.85}
+.home-hero-carousel.slide-1{background:#100e1a}
+.home-hero-carousel.slide-1 .home-hero-eyebrow{color:#e9c98d}
+.home-hero-gold{color:#ecc178}
+.home-hero-carousel.slide-1 .btn-primary{background:#ecc178;color:#22182a;border-color:#ecc178}
+.home-hero-carousel .home-hero-image-wrapper{width:65%}
+.home-hero-carousel.slide-1 .home-hero-image{object-position:70% center;mask-image:linear-gradient(to right,transparent,black 42%);-webkit-mask-image:linear-gradient(to right,transparent,black 42%)}
+.home-carousel-controls{position:absolute;bottom:30px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:20px;z-index:3}
+.home-slide-tabs{display:flex;gap:24px}.home-slide-tabs button{display:flex;align-items:center;gap:10px;background:none;color:#9b94a7;border:0;border-top:2px solid #ffffff25;padding:14px 0 0;min-width:130px;cursor:pointer;font-size:12px;text-align:left}
+.home-slide-tabs button.is-active{border-color:#b4a5ff;color:#fff}.home-slide-index{font-size:10px;opacity:.6}.home-slide-arrows{display:flex;align-items:center;gap:10px}.home-slide-arrows button{background:#0d0c17aa;color:#eee;border:1px solid #ffffff25;border-radius:8px;padding:10px 13px;cursor:pointer;font-size:12px}.home-slide-arrows button:hover{border-color:#b4a5ff}.home-carousel-controls button:focus-visible{outline:2px solid #b4a5ff;outline-offset:4px}
+@media(max-width:767px){.home-hero-carousel{min-height:640px;padding:60px 0 125px}.home-hero-carousel .home-hero-image-wrapper{width:100%}.home-slide-image.is-active{opacity:.35}.home-hero-carousel.slide-1 .home-hero-image{object-position:60% center;mask-image:linear-gradient(to bottom,black,transparent 90%);-webkit-mask-image:linear-gradient(to bottom,black,transparent 90%)}.home-hero-carousel .home-hero-content{max-width:31rem}.home-hero-carousel .home-hero-title{font-size:clamp(48px,10vw,70px)}.home-carousel-controls{flex-wrap:wrap;bottom:24px;gap:15px}.home-slide-tabs{gap:16px}.home-slide-tabs button{min-width:105px}.home-slide-arrows{gap:6px}.home-slide-arrows button{padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){.home-slide-image{transition:none}}

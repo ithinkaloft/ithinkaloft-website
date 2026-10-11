@@ -21,7 +21,7 @@ export default function GameMediaGallery({ game }: GameMediaGalleryProps) {
   });
 
   return (
-    <section className="game-media-gallery">
+    <section className="game-media-gallery" id="inside-the-game">
       <Container>
         {Object.entries(groups).map(([category, items]) => (
           <div key={category} className="game-media-gallery-group">

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import SiteLayout from '../layouts/SiteLayout';
 import HomePage from '../pages/HomePage';
 import GamesPage from '../pages/GamesPage';
@@ -6,7 +6,7 @@ import GameDetailPage from '../pages/GameDetailPage';
 import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
 import PrivacyPage from '../pages/PrivacyPage';
-import CoreForgePrivacyPage from '../pages/CoreForgePrivacyPage';
+import SortingWarPrivacyPage from '../pages/SortingWarPrivacyPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 export const router = createBrowserRouter([
@@ -39,9 +39,11 @@ export const router = createBrowserRouter([
         element: <PrivacyPage />,
       },
       {
-        path: 'privacy/core-forge',
-        element: <CoreForgePrivacyPage />,
+        path: 'privacy/sorting-war',
+        element: <SortingWarPrivacyPage />,
       },
+      { path: 'games/core-forge', element: <Navigate to="/games/sorting-war" replace /> },
+      { path: 'privacy/core-forge', element: <Navigate to="/privacy/sorting-war" replace /> },
       {
         path: '*',
         element: <NotFoundPage />,

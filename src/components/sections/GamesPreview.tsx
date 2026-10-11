@@ -20,7 +20,7 @@ export default function GamesPreview({ games }: GamesPreviewProps) {
           <SectionHeading 
             eyebrow="OUR GAMES"
             title="Different worlds. Same attention to detail."
-            description="From intense sci-fi systems to approachable puzzle play, each game has its own identity while sharing the same focus on feel and polish."
+            description="From elemental battles to classic arcade puzzles, discover small worlds made for one more move."
           />
         </Reveal>
         

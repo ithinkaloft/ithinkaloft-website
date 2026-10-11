@@ -22,7 +22,7 @@ export default function AboutGames({ games }: AboutGamesProps) {
               Built with the same care.
             </h2>
             <p className="about-games-desc">
-              CORE FORGE and Pocket Puzzle Arcade take very different forms, but both are shaped by the same focus on feel, identity, and polish.
+              Sorting War and Pocket Puzzle Arcade take very different forms, but both are shaped by the same focus on feel, identity, and polish.
             </p>
           </Reveal>
         </div>

@@ -2,86 +2,117 @@ import type { Game } from '../types/game';
 
 export const games: Game[] = [
   {
-    id: 'core-forge',
-    slug: 'core-forge',
-    title: 'CORE FORGE',
-    status: 'in-development',
-    tagline: 'Puzzle strategy meets roguelite combat.',
-    shortDescription: 'An atmospheric puzzle game blending satisfying mechanics with deep progression.',
-    overview: {
-      heading: 'Solve. Power. Survive.',
-      paragraphs: [
-        'CORE FORGE combines sorting puzzles with real-time combat. Solving chambers generates the energy needed to power an expanding arsenal, turning every puzzle decision into part of the fight.',
-        'Push deeper through an evolving facility, adapt your build, confront increasingly dangerous enemies, and survive the systems waiting below.'
-      ]
-    },
-    genre: 'Atmospheric Strategy Puzzle',
-    highlights: [
-      {
-        title: 'Puzzle-Powered Combat',
-        description: 'Convert spatial puzzle mechanics into devastating attacks and defense.'
-      },
-      {
-        title: 'Build Your Arsenal',
-        description: 'Discover, unlock, and experiment with evolving weapon combinations.'
-      },
-      {
-        title: 'Evolving Facility',
-        description: 'Navigate through five distinct, procedurally influenced dark industrial sectors.'
-      }
-    ],
-    platforms: [{ name: 'Android' }],
-    availability: {
-      label: 'In Development',
-      description: 'The facility is still being forged.',
-      note: 'Development is underway for Android.'
-    },
-    media: {
-      hero: {
-        src: '/assets/games/core-forge/web/core-forge-hero-1600.webp',
-        alt: 'Atmospheric reactor chamber of the CORE FORGE facility',
-        width: 1600,
-        height: 3557, // 1600 * 1870 / 841
-        sources: [
-          { src: '/assets/games/core-forge/web/core-forge-hero-1600.webp', width: 1600 },
-          { src: '/assets/games/core-forge/web/core-forge-hero-1200.webp', width: 1200 },
-          { src: '/assets/games/core-forge/web/core-forge-hero-800.webp', width: 800 }
-        ]
-      },
-      thumbnail: {
-        src: '/assets/games/core-forge/web/core-forge-thumbnail-960.webp',
-        alt: 'Four colored energy systems feeding the CORE FORGE machinery',
-        width: 960,
-        height: 540,
-        sources: [
-          { src: '/assets/games/core-forge/web/core-forge-thumbnail-960.webp', width: 960 },
-          { src: '/assets/games/core-forge/web/core-forge-thumbnail-640.webp', width: 640 }
-        ]
-      },
-      screenshots: [
-        { src: '/assets/games/core-forge/web/gameplay-wave.webp', alt: 'CORE FORGE gameplay showing the sorting puzzle, weapon systems and automated enemies.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/assets/games/core-forge/web/gameplay-boss-crusher.webp', alt: 'Crusher boss encounter during Sector 1 of CORE FORGE.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/assets/games/core-forge/web/weapon-fusion.webp', alt: 'Weapon Fusion choices including Cryo Burst, Toxic Surge and Frozen Plague.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/assets/games/core-forge/web/facility-ai-alert.webp', alt: 'Facility AI security alert introducing the automated defense takeover.', width: 727, height: 1510, category: 'Gameplay' },
-        { src: '/assets/games/core-forge/web/opening-directive.webp', alt: 'Four energy systems feeding the CORE FORGE facility machinery.', width: 1024, height: 1536, category: 'World & Systems' },
-        { src: '/assets/games/core-forge/web/opening-threat.webp', alt: 'Automated machines occupying a hostile CORE FORGE facility sector.', width: 1024, height: 1536, category: 'World & Systems' }
-      ]
-    },
-    theme: {
-      mode: 'dark',
-      accent: '#69e6ff',
-      accentSecondary: '#ff9a55',
-      background: '#071016',
-      surface: '#101b22',
-      text: '#f3f8fa',
-    },
-    seo: {
-      title: 'CORE FORGE',
-      description: 'An atmospheric puzzle game blending satisfying mechanics with deep progression.',
-      image: '/assets/games/core-forge/web/core-forge-og-1200x630.webp'
-    },
-    featured: true
+  "id": "sorting-war",
+  "slug": "sorting-war",
+  "title": "Sorting War",
+  "status": "coming-soon",
+  "tagline": "Every sort strikes back.",
+  "shortDescription": "Sort the elements. Unleash your hero. Turn a satisfying puzzle into a battle worth winning.",
+  "overview": {
+    "heading": "A little strategy. A lot of firepower.",
+    "paragraphs": [
+      "Match the elements inside your tubes to launch attacks, build combos, and charge your hero\u2019s ultimate. Every move is a choice: strike now, or set up something bigger.",
+      "Lead five elemental heroes through 40 campaign battles, return for the tougher Elite campaign, or see how far your build can go in the endless Gauntlet."
+    ]
   },
+  "genre": "Elemental Puzzle Battler",
+  "highlights": [
+    {
+      "title": "40 campaign battles",
+      "description": "Eight fronts with changing boards, new twists, and bosses that test your strategy."
+    },
+    {
+      "title": "Five elemental heroes",
+      "description": "Choose Nova, Frost, Sprout, Volta, or Hex. Upgrade your favorite and master their ultimate."
+    },
+    {
+      "title": "More ways to battle",
+      "description": "Daily challenges, endless Gauntlet runs, and Ranked battles against player-inspired ghosts."
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Android"
+    }
+  ],
+  "availability": {
+    "label": "Coming soon",
+    "description": "Your next battle is taking shape.",
+    "note": "Sorting War is preparing for its Android release. Follow the studio for launch updates."
+  },
+  "media": {
+    "hero": {
+      "src": "/assets/games/sorting-war/web/cover.webp",
+      "alt": "Sorting War elemental heroes gathered around glowing puzzle tubes",
+      "width": 1080,
+      "height": 1920
+    },
+    "thumbnail": {
+      "src": "/assets/games/sorting-war/web/feature.webp",
+      "alt": "Sorting War fantasy puzzle battle artwork",
+      "width": 1024,
+      "height": 500
+    },
+    "screenshots": [
+      {
+        "src": "/assets/games/sorting-war/web/01-elemental-battle.webp",
+        "alt": "Elemental sorting battle with heroes and attack tubes",
+        "width": 720,
+        "height": 1280,
+        "category": "Inside the game"
+      },
+      {
+        "src": "/assets/games/sorting-war/web/02-storm-and-sealed-tubes.webp",
+        "alt": "Storm battle featuring sealed tubes",
+        "width": 720,
+        "height": 1280,
+        "category": "Inside the game"
+      },
+      {
+        "src": "/assets/games/sorting-war/web/03-convergence-boss.webp",
+        "alt": "Convergence boss battle",
+        "width": 720,
+        "height": 1280,
+        "category": "Inside the game"
+      },
+      {
+        "src": "/assets/games/sorting-war/web/04-campaign-40-levels.webp",
+        "alt": "Campaign map across eight fronts",
+        "width": 720,
+        "height": 1280,
+        "category": "Inside the game"
+      },
+      {
+        "src": "/assets/games/sorting-war/web/05-hero-upgrades.webp",
+        "alt": "Hero upgrade screen",
+        "width": 720,
+        "height": 1280,
+        "category": "Inside the game"
+      },
+      {
+        "src": "/assets/games/sorting-war/web/06-gauntlet-upgrades.webp",
+        "alt": "Gauntlet upgrades between rounds",
+        "width": 720,
+        "height": 1280,
+        "category": "Inside the game"
+      }
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "accent": "#f4cf85",
+    "accentSecondary": "#bd9cff",
+    "background": "#0d0c17",
+    "surface": "#191526",
+    "text": "#fbf4e8"
+  },
+  "seo": {
+    "title": "Sorting War",
+    "description": "An elemental puzzle battler with five heroes, 40 campaign battles, Elite difficulty, Gauntlet, and daily challenges. Coming soon to Android.",
+    "image": "/assets/games/sorting-war/web/feature.webp"
+  },
+  "featured": true
+},
   {
     id: 'pocket-puzzle-arcade',
     slug: 'pocket-puzzle-arcade',

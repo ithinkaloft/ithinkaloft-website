@@ -3,13 +3,13 @@ import Container from '../components/common/Container';
 import PageMeta from '../components/common/PageMeta';
 import './PrivacyPage.css'; // Reusing the generic privacy page styling
 
-export default function CoreForgePrivacyPage() {
+export default function SortingWarPrivacyPage() {
   return (
     <main className="page-privacy">
       <PageMeta 
-        title="CORE FORGE Privacy Policy | I Think Aloft" 
-        description="Privacy policy and data handling information for CORE FORGE by I Think Aloft." 
-        path="/privacy/core-forge" 
+        title="Sorting War Privacy Policy | I Think Aloft" 
+        description="Privacy policy and data handling information for Sorting War by I Think Aloft." 
+        path="/privacy/sorting-war" 
       />
       
       <Container>
@@ -19,38 +19,38 @@ export default function CoreForgePrivacyPage() {
               GAME PRIVACY
             </span>
             <h1 className="privacy-title">
-              CORE FORGE Privacy Policy
+              Sorting War Privacy Policy
             </h1>
             <p className="privacy-date">
-              Last updated: August 26, 2026
+              Last updated: October 11, 2026
             </p>
           </header>
 
           <div className="privacy-content">
             <section>
               <p>
-                I Think Aloft (“we”, “our”, or “us”) develops and publishes CORE FORGE.<br />
-                This Privacy Policy explains how information is handled when you use CORE FORGE.
+                I Think Aloft (“we”, “our”, or “us”) develops and publishes Sorting War.<br />
+                This Privacy Policy explains how information is handled when you use Sorting War.
               </p>
             </section>
 
             <section>
               <h2>Information We Handle</h2>
               <p>
-                CORE FORGE does not require you to create an account or provide your name, email address, phone number, or other profile information in order to play.
+                Sorting War stores core gameplay progress on your device. Online features use a player identifier and display name; where available, the game may use your Google Play Games display name.
               </p>
               <p>
                 Game progress, settings, unlocks, and similar gameplay information are primarily stored locally on your device.
               </p>
               <p>
-                CORE FORGE uses third-party advertising services that may automatically collect certain device and usage information as described below.
+                Sorting War uses third-party advertising services that may automatically collect certain device and usage information as described below.
               </p>
             </section>
 
             <section>
               <h2>Advertising and Google AdMob</h2>
               <p>
-                CORE FORGE uses Google AdMob / Google Mobile Ads to provide advertisements, including rewarded ads and interstitial ads.
+                Sorting War uses Google AdMob / Google Mobile Ads to provide advertisements, including rewarded ads and interstitial ads.
               </p>
               <p>Google and its advertising partners may process information such as:</p>
               <ul>
@@ -79,8 +79,8 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Rewarded Advertisements</h2>
               <p>
-                CORE FORGE includes optional rewarded advertisements.<br />
-                Players may choose to watch a rewarded advertisement in exchange for an in-game benefit, such as Forge Coins or a gameplay recovery opportunity.<br />
+                Sorting War includes optional rewarded advertisements.<br />
+                Players may choose to watch a rewarded advertisement in exchange for an in-game benefit, such as coins or a gameplay recovery opportunity.<br />
                 Watching rewarded advertisements is optional.
               </p>
             </section>
@@ -88,7 +88,7 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Interstitial Advertisements</h2>
               <p>
-                CORE FORGE may display interstitial advertisements at appropriate breaks between gameplay sessions or completed missions.<br />
+                Sorting War may display interstitial advertisements at appropriate breaks between gameplay sessions or completed missions.<br />
                 Interstitial advertisements are not intended to appear during active gameplay.
               </p>
             </section>
@@ -99,7 +99,7 @@ export default function CoreForgePrivacyPage() {
                 Depending on your location, device settings, age-related requirements, consent choices, and applicable law, advertisements may be personalized or non-personalized.
               </p>
               <p>
-                Where required, Google or CORE FORGE may request consent or apply restricted advertising behavior before serving certain advertisements.
+                Where required, Google or Sorting War may request consent or apply restricted advertising behavior before serving certain advertisements.
               </p>
               <p>
                 You may also be able to control or reset advertising personalization through your Android or Google account privacy settings.
@@ -109,7 +109,7 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Data Stored on Your Device</h2>
               <p>
-                CORE FORGE stores gameplay-related information locally on your device, which may include:
+                Sorting War stores gameplay-related information locally on your device, which may include:
               </p>
               <ul>
                 <li>Game progress</li>
@@ -119,10 +119,10 @@ export default function CoreForgePrivacyPage() {
                 <li>Settings and preferences</li>
               </ul>
               <p>
-                CORE FORGE does not currently provide user accounts or cloud-based player profiles.
+                Online features use Firebase authentication and Cloud Firestore. Leaderboards and Ranked ghost profiles may include a player identifier, display name, score, trophies, selected hero, hero level, play-style statistics, and update timestamps. Other players can see leaderboard entries and Ranked profiles.
               </p>
               <p>
-                You can remove locally stored CORE FORGE data through your Android device's app-storage controls or by uninstalling the app.
+                You can remove locally stored Sorting War data through your Android device's app-storage controls or by uninstalling the app.
               </p>
             </section>
 
@@ -139,7 +139,7 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Data Security</h2>
               <p>
-                We take reasonable measures to limit the information handled directly by CORE FORGE.
+                We take reasonable measures to limit the information handled directly by Sorting War.
               </p>
               <p>
                 Information transmitted by third-party services is handled according to the security practices of those providers. Google states that data collected by the Google Mobile Ads SDK is encrypted in transit.
@@ -155,7 +155,7 @@ export default function CoreForgePrivacyPage() {
                 Gameplay data stored locally on your device remains there until it is cleared, overwritten, or the app is uninstalled.
               </p>
               <p>
-                Because CORE FORGE currently does not provide user accounts or maintain a developer-operated cloud player database, there is generally no account-associated CORE FORGE gameplay profile stored by I Think Aloft to delete.
+                Clearing local data or uninstalling the app does not automatically delete leaderboard entries or Ranked profiles stored online. Contact us through the support page if you want to request removal of online information; include your player name and relevant details so we can identify the record.
               </p>
               <p>
                 Information processed by Google or other advertising providers is subject to their respective retention and deletion practices.
@@ -168,20 +168,20 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Children's Privacy</h2>
               <p>
-                CORE FORGE does not intentionally ask players to provide personal information directly through the game.
+                Sorting War does not intentionally ask players to provide personal information directly through the game.
               </p>
               <p>
                 Advertising and data-handling behavior may vary depending on applicable age, regional, consent, and Google Play requirements.
               </p>
               <p>
-                We will configure the app and its advertising services in accordance with the audience selections and legal requirements applicable to the published version of CORE FORGE.
+                We will configure the app and its advertising services in accordance with the audience selections and legal requirements applicable to the published version of Sorting War.
               </p>
             </section>
 
             <section>
               <h2>Third-Party Services</h2>
               <p>
-                CORE FORGE currently uses:
+                Sorting War currently uses:
               </p>
               <ul>
                 <li>
@@ -190,14 +190,14 @@ export default function CoreForgePrivacyPage() {
                 </li>
               </ul>
               <p>
-                Third-party services operate under their own privacy policies and terms.
+                Firebase Authentication and Cloud Firestore support online leaderboards and Ranked ghost profiles. Google Play Games may provide a player display name. Third-party services operate under their own privacy policies and terms.
               </p>
             </section>
 
             <section>
               <h2>External Links</h2>
               <p>
-                CORE FORGE may provide links that open external websites, such as this Privacy Policy or the I Think Aloft support page.
+                Sorting War may provide links that open external websites, such as this Privacy Policy or the I Think Aloft support page.
               </p>
               <p>
                 We are not responsible for the privacy practices or content of third-party websites.
@@ -207,7 +207,7 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Changes to This Privacy Policy</h2>
               <p>
-                We may update this Privacy Policy when CORE FORGE, our services, third-party SDKs, or legal requirements change.<br />
+                We may update this Privacy Policy when Sorting War, our services, third-party SDKs, or legal requirements change.<br />
                 When this policy is updated, the “Last updated” date at the top of this page will be revised.
               </p>
             </section>
@@ -215,12 +215,12 @@ export default function CoreForgePrivacyPage() {
             <section>
               <h2>Contact</h2>
               <p>
-                If you have questions, concerns, or requests relating to privacy or CORE FORGE, please contact I Think Aloft through:<br />
+                If you have questions, concerns, or requests relating to privacy or Sorting War, please contact I Think Aloft through:<br />
                 <Link to="/contact" style={{ color: 'var(--brand-primary)', textDecoration: 'underline' }}>https://ithinkaloft.com/contact</Link>
               </p>
               <p style={{ marginTop: 'var(--space-6)' }}>
                 <strong>Developer:</strong> I Think Aloft<br />
-                <strong>Game:</strong> CORE FORGE
+                <strong>Game:</strong> Sorting War
               </p>
             </section>
           </div>

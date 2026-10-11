@@ -30,7 +30,7 @@ export default function PrivacyPage() {
               <h2>1. About this website</h2>
               <p>
                 This privacy policy applies to the ithinkaloft studio website (ithinkaloft.com). 
-                Please note that individual games developed by ithinkaloft (such as CORE FORGE or Pocket Puzzle Arcade) 
+                Please note that individual games developed by ithinkaloft (such as Sorting War or Pocket Puzzle Arcade)
                 may have their own separate privacy policies describing data practices specific to those products, 
                 including analytics, save data, or third-party SDKs.
               </p>
