@@ -7,6 +7,7 @@ import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
 import PrivacyPage from '../pages/PrivacyPage';
 import SortingWarPrivacyPage from '../pages/SortingWarPrivacyPage';
+import SortingWarDeletionPage from '../pages/SortingWarDeletionPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 export const router = createBrowserRouter([
@@ -42,6 +43,7 @@ export const router = createBrowserRouter([
         path: 'privacy/sorting-war',
         element: <SortingWarPrivacyPage />,
       },
+      { path: 'privacy/sorting-war/delete-data', element: <SortingWarDeletionPage /> },
       { path: 'games/core-forge', element: <Navigate to="/games/sorting-war" replace /> },
       { path: 'privacy/core-forge', element: <Navigate to="/privacy/sorting-war" replace /> },
       {

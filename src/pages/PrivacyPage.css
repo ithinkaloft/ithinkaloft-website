@@ -85,3 +85,6 @@
 .privacy-content section ul:last-child {
   margin-bottom: 0;
 }
+
+.privacy-content section ol { margin: var(--space-4) 0 var(--space-6) var(--space-6); padding: 0; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.125rem); line-height: 1.75; }
+.privacy-content section ol li { margin-bottom: var(--space-3); }

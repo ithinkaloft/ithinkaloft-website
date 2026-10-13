@@ -22,7 +22,7 @@ export default function SortingWarPrivacyPage() {
               Sorting War Privacy Policy
             </h1>
             <p className="privacy-date">
-              Last updated: October 11, 2026
+              Last updated: October 13, 2026
             </p>
           </header>
 
@@ -155,7 +155,7 @@ export default function SortingWarPrivacyPage() {
                 Gameplay data stored locally on your device remains there until it is cleared, overwritten, or the app is uninstalled.
               </p>
               <p>
-                Clearing local data or uninstalling the app does not automatically delete leaderboard entries or Ranked profiles stored online. Contact us through the support page if you want to request removal of online information; include your player name and relevant details so we can identify the record.
+                Clearing local data or uninstalling the app does not automatically delete leaderboard entries or Ranked profiles stored online. To request removal of online information, follow the steps on our <Link to="/privacy/sorting-war/delete-data">Sorting War data-deletion page</Link>.
               </p>
               <p>
                 Information processed by Google or other advertising providers is subject to their respective retention and deletion practices.
