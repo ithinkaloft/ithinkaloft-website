@@ -60,7 +60,7 @@ export default function GameDetailPage() {
 
         {/* Game Availability */}
         <GameAvailability game={game} />
-        {game.slug === 'sorting-war' && <p style={{textAlign: 'center', padding: '0 20px 36px'}}><a href="/privacy/sorting-war" style={{color: '#c7b48f', fontSize: '13px'}}>Sorting War privacy policy</a></p>}
+        {game.slug === 'sorting-war' && <p style={{textAlign: 'center', padding: '0 20px 36px'}}><a href="/privacy/sorting-war" style={{color: '#c7b48f', fontSize: '13px'}}>Sorting War privacy policy</a> · <a href="/terms/sorting-war" style={{color: '#c7b48f', fontSize: '13px'}}>Terms &amp; Conditions</a> · <a href="/privacy/sorting-war/delete-data" style={{color: '#c7b48f', fontSize: '13px'}}>Data deletion</a></p>}
       </GameLayout></div>
 
       {/* More Games sits outside GameLayout to return to the studio theme */}

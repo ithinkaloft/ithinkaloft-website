@@ -214,6 +214,7 @@ export default function SortingWarPrivacyPage() {
 
             <section>
               <h2>Contact</h2>
+              <p>For game usage and purchase terms, read the <Link to="/terms/sorting-war">Sorting War Terms &amp; Conditions</Link>.</p>
               <p>
                 If you have questions, concerns, or requests relating to privacy or Sorting War, please contact I Think Aloft through:<br />
                 <Link to="/contact" style={{ color: 'var(--brand-primary)', textDecoration: 'underline' }}>https://ithinkaloft.com/contact</Link>
