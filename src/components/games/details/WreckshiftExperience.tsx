@@ -19,7 +19,7 @@ const arenas = [
 const modes = [
   ['01', 'Endless Chase', 'Survive. Score. Climb the Wanted level.', 'Every wreck raises the heat until the whole force is on you. Build Wreck Chains for huge scores and chase your best on the leaderboard.'],
   ['02', 'Showdown', 'Last car running wins.', 'Duel one rival or fight three in a free-for-all, with police on everyone and supply drops of NITRO, shields, repairs and oil slicks.'],
-  ['03', 'Missions', '45 jobs. Three chapters. Boss chases.', 'Get the scrap out, survive the blockade, take down the boss car. Earn up to three stars a mission and unlock the next arena.'],
+  ['03', 'Missions', '48 jobs. Three chapters. Boss chases.', 'Get the scrap out, survive the blockade, take down the boss car. Earn up to three stars a mission and unlock the next arena.'],
   ['04', 'Multiplayer', 'Up to four friends on the same Wi-Fi.', 'Host a Showdown and race your friends in the same yard, the police chasing all of you at once.'],
 ];
 

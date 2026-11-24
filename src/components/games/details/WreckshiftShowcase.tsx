@@ -22,7 +22,7 @@ export default function WreckshiftShowcase() {
         <div className="ws-facts">
           <div><strong>3</strong><span>Arenas</span></div>
           <div><strong>10</strong><span>Cars to own</span></div>
-          <div><strong>45</strong><span>Missions</span></div>
+          <div><strong>48</strong><span>Missions</span></div>
           <div><strong>4</strong><span>Players on Wi-Fi</span></div>
         </div>
       </div>

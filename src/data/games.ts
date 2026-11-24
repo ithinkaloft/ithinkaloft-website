@@ -12,7 +12,7 @@ export const games: Game[] = [
       heading: 'The police never stop coming. Make them pay for it.',
       paragraphs: [
         'WRECKSHIFT drops you into arenas built to fight back: a scrapyard with a car crusher, rain-soaked neon docks with a container crane, a frozen quarry where the ice takes your grip. Every wreck you cause raises the heat until the whole force is after you.',
-        'Survive Endless Chase for the leaderboard, win Showdowns against rival cars, work through 45 Missions, or bring up to three friends into the same yard on your Wi-Fi.'
+        'Survive Endless Chase for the leaderboard, win Showdowns against rival cars, work through 48 Missions, or bring up to three friends into the same yard on your Wi-Fi.'
       ]
     },
     genre: 'Arcade Police-Chase Driving',
@@ -49,7 +49,7 @@ export const games: Game[] = [
     },
     seo: {
       title: 'WRECKSHIFT',
-      description: 'An arcade police-chase driving game for Android: three arenas, ten cars, 45 missions, Showdowns, leaderboards and Wi-Fi multiplayer. Coming soon.',
+      description: 'An arcade police-chase driving game for Android: three arenas, ten cars, 48 missions, Showdowns, leaderboards and Wi-Fi multiplayer. Coming soon.',
       image: '/assets/games/wreckshift/web/og-1200x630.webp'
     },
     featured: true
