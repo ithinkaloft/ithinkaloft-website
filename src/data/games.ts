@@ -65,22 +65,22 @@ export const games: Game[] = [
     "heading": "A little strategy. A lot of firepower.",
     "paragraphs": [
       "Match the elements inside your tubes to launch attacks, build combos, and charge your hero\u2019s ultimate. Every move is a choice: strike now, or set up something bigger.",
-      "Lead five elemental heroes through 40 campaign battles, return for the tougher Elite campaign, or see how far your build can go in the endless Gauntlet."
+      "Lead six heroes through 60 campaign battles across 12 fronts. Replay them on Elite, build a run in the endless Gauntlet, or invite a friend to play over local Wi-Fi."
     ]
   },
   "genre": "Elemental Puzzle Battler",
   "highlights": [
     {
-      "title": "40 campaign battles",
-      "description": "Eight fronts with changing boards, new twists, and bosses that test your strategy."
+      "title": "60 campaign battles",
+      "description": "Twelve fronts with changing boards, boss battles, and a tougher Elite campaign."
     },
     {
-      "title": "Five elemental heroes",
-      "description": "Choose Nova, Frost, Sprout, Volta, or Hex. Upgrade your favorite and master their ultimate."
+      "title": "Six playable heroes",
+      "description": "Choose Nova, Frost, Sprout, Volta, Hex, or Echo. Recruit heroes as you progress and upgrade their ultimates."
     },
     {
       "title": "More ways to battle",
-      "description": "Daily challenges, endless Gauntlet runs, and Ranked battles against player-inspired ghosts."
+      "description": "Team up against the AI or challenge a friend on the same Wi-Fi network. Play the Daily Challenge, Gauntlet, and Ranked ghost battles on your own."
     }
   ],
   "platforms": [
@@ -132,10 +132,10 @@ export const games: Game[] = [
         "category": "Inside the game"
       },
       {
-        "src": "/assets/games/sorting-war/web/04-campaign-40-levels.webp",
-        "alt": "Campaign map across eight fronts",
-        "width": 720,
-        "height": 1280,
+        "src": "/assets/games/sorting-war/web/07-aegis-fortress.webp",
+        "alt": "Battle against the Imperator at Aegis Fortress",
+        "width": 400,
+        "height": 880,
         "category": "Inside the game"
       },
       {
@@ -164,7 +164,7 @@ export const games: Game[] = [
   },
   "seo": {
     "title": "Sorting War",
-    "description": "An elemental puzzle battler with five heroes, 40 campaign battles, Elite difficulty, Gauntlet, and daily challenges. Out now on Android.",
+    "description": "Sort, strike, and unleash hero ultimates in 60 campaign battles, Elite replays, Gauntlet, and local Wi-Fi battles. Available on Android.",
     "image": "/assets/games/sorting-war/web/feature.webp"
   },
   "featured": true
