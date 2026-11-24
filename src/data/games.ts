@@ -58,7 +58,7 @@ export const games: Game[] = [
   "id": "sorting-war",
   "slug": "sorting-war",
   "title": "Sorting War",
-  "status": "coming-soon",
+  "status": "available",
   "tagline": "Every sort strikes back.",
   "shortDescription": "Sort the elements. Unleash your hero. Turn a satisfying puzzle into a battle worth winning.",
   "overview": {
@@ -88,10 +88,13 @@ export const games: Game[] = [
       "name": "Android"
     }
   ],
+  "store": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.ithinkaloft.brainak.sortingwar"
+  },
   "availability": {
-    "label": "Coming soon",
-    "description": "Your next battle is taking shape.",
-    "note": "Sorting War is preparing for its Android release. Follow the studio for launch updates."
+    "label": "Available now",
+    "description": "Your next battle starts now.",
+    "note": "Sorting War is out now on Android."
   },
   "media": {
     "hero": {
@@ -161,7 +164,7 @@ export const games: Game[] = [
   },
   "seo": {
     "title": "Sorting War",
-    "description": "An elemental puzzle battler with five heroes, 40 campaign battles, Elite difficulty, Gauntlet, and daily challenges. Coming soon to Android.",
+    "description": "An elemental puzzle battler with five heroes, 40 campaign battles, Elite difficulty, Gauntlet, and daily challenges. Out now on Android.",
     "image": "/assets/games/sorting-war/web/feature.webp"
   },
   "featured": true
