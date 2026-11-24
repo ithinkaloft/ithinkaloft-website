@@ -52,6 +52,7 @@ export const router = createBrowserRouter([
       { path: 'privacy/wreckshift', element: <WreckshiftPrivacyPage /> },
       { path: 'privacy/wreckshift/delete-data', element: <WreckshiftDeletionPage /> },
       { path: 'terms/wreckshift', element: <WreckshiftTermsPage /> },
+      { path: 'wreckshift', element: <Navigate to="/games/wreckshift" replace /> },
       { path: 'games/core-forge', element: <Navigate to="/games/sorting-war" replace /> },
       { path: 'privacy/core-forge', element: <Navigate to="/privacy/sorting-war" replace /> },
       {

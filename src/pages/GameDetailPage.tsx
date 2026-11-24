@@ -15,9 +15,12 @@ import type { Game } from '../types/game';
 
 import React from 'react';
 import SortingWarShowcase from '../components/games/details/SortingWarShowcase';
+import WreckshiftShowcase from '../components/games/details/WreckshiftShowcase';
+import WreckshiftExperience from '../components/games/details/WreckshiftExperience';
 
 const gameSpecificExperiences: Record<string, React.FC<{ game: Game }>> = {
   'sorting-war': () => <SortingWarExperience />,
+  'wreckshift': () => <WreckshiftExperience />,
   'pocket-puzzle-arcade': (props) => <PocketPuzzleArcadeExperience {...props} />,
 };
 
@@ -42,9 +45,9 @@ export default function GameDetailPage() {
         path={`/games/${game.slug}`}
         image={game.seo.image}
       />
-      <div className={game.slug === 'sorting-war' ? 'sw-game' : ''}><GameLayout game={game}>
+      <div className={game.slug === 'sorting-war' ? 'sw-game' : game.slug === 'wreckshift' ? 'ws-game' : ''}><GameLayout game={game}>
         {/* Game Hero */}
-        {game.slug === 'sorting-war' ? <SortingWarShowcase /> : <GameHero game={game} />}
+        {game.slug === 'sorting-war' ? <SortingWarShowcase /> : game.slug === 'wreckshift' ? <WreckshiftShowcase /> : <GameHero game={game} />}
 
         {/* Game Overview */}
         <GameOverview game={game} />
@@ -61,6 +64,7 @@ export default function GameDetailPage() {
         {/* Game Availability */}
         <GameAvailability game={game} />
         {game.slug === 'sorting-war' && <p style={{textAlign: 'center', padding: '0 20px 36px'}}><a href="/privacy/sorting-war" style={{color: '#c7b48f', fontSize: '13px'}}>Sorting War privacy policy</a> · <a href="/terms/sorting-war" style={{color: '#c7b48f', fontSize: '13px'}}>Terms &amp; Conditions</a> · <a href="/privacy/sorting-war/delete-data" style={{color: '#c7b48f', fontSize: '13px'}}>Data deletion</a></p>}
+        {game.slug === 'wreckshift' && <p className="ws-legal"><a href="/privacy/wreckshift">WRECKSHIFT privacy policy</a> · <a href="/terms/wreckshift">Terms &amp; Conditions</a> · <a href="/privacy/wreckshift/delete-data">Data deletion</a></p>}
       </GameLayout></div>
 
       {/* More Games sits outside GameLayout to return to the studio theme */}

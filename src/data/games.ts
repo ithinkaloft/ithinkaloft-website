@@ -2,6 +2,59 @@ import type { Game } from '../types/game';
 
 export const games: Game[] = [
   {
+    id: 'wreckshift',
+    slug: 'wreckshift',
+    title: 'WRECKSHIFT',
+    status: 'coming-soon',
+    tagline: 'Outrun. Outsmart. Outlast.',
+    shortDescription: 'An arcade police-chase driving game: make the police wreck, chain the pileups and stay loose as long as you can.',
+    overview: {
+      heading: 'The police never stop coming. Make them pay for it.',
+      paragraphs: [
+        'WRECKSHIFT drops you into arenas built to fight back: a scrapyard with a car crusher, rain-soaked neon docks with a container crane, a frozen quarry where the ice takes your grip. Every wreck you cause raises the heat until the whole force is after you.',
+        'Survive Endless Chase for the leaderboard, win Showdowns against rival cars, work through 45 Missions, or bring up to three friends into the same yard on your Wi-Fi.'
+      ]
+    },
+    genre: 'Arcade Police-Chase Driving',
+    highlights: [
+      { title: 'Three arenas that fight back', description: 'Crushers, cranes, ice and haul trucks: lure the chase into the yard and let it do the work.' },
+      { title: 'Wreck Chains and Wanted levels', description: 'Chain police wrecks for huge scores while the Wanted level brings in more cars and the helicopter.' },
+      { title: 'Ten cars, one garage', description: 'Earn Scrap, buy or rent your next car, pick its paint and learn how it handles the chase.' }
+    ],
+    platforms: [{ name: 'Android' }],
+    availability: {
+      label: 'Coming soon',
+      description: 'The chase is almost ready.',
+      note: 'WRECKSHIFT is preparing for its Android release. Follow the studio for launch news.'
+    },
+    media: {
+      hero: { src: '/assets/games/wreckshift/web/breakyard.webp', alt: 'The WRECKSHIFT hero car speeds through the Breakyard at sunset with police behind', width: 1672, height: 941 },
+      thumbnail: { src: '/assets/games/wreckshift/web/feature.webp', alt: 'WRECKSHIFT key art: a police chase through the Breakyard', width: 1024, height: 500 },
+      screenshots: [
+        { src: '/assets/games/wreckshift/web/01-breakyard-heli.webp', alt: 'Wanted 5 in the Breakyard: the police helicopter closes in over the container alley', width: 1600, height: 720, category: 'Inside the game' },
+        { src: '/assets/games/wreckshift/web/02-breakyard-chase.webp', alt: 'Running the Breakyard wall with a police car and the helicopter on your tail', width: 1600, height: 720, category: 'Inside the game' },
+        { src: '/assets/games/wreckshift/web/03-docks-neon.webp', alt: 'Neon Docks at night: headlights sweep the wet quay under the NEON DOCKS sign', width: 1600, height: 720, category: 'Inside the game' },
+        { src: '/assets/games/wreckshift/web/04-docks-pileup.webp', alt: 'A police pileup behind the player on Warehouse Row in Neon Docks', width: 1600, height: 720, category: 'Inside the game' },
+        { src: '/assets/games/wreckshift/web/05-quarry-heli.webp', alt: 'Frozen Quarry: the helicopter and four police cars converge on the ice', width: 1600, height: 720, category: 'Inside the game' },
+        { src: '/assets/games/wreckshift/web/06-quarry-wrecks.webp', alt: 'Wrecked police cars in the Frozen Quarry blast area', width: 1600, height: 720, category: 'Inside the game' }
+      ]
+    },
+    theme: {
+      mode: 'dark',
+      accent: '#ffb340',
+      accentSecondary: '#8bdfcb',
+      background: '#0c1015',
+      surface: '#171d24',
+      text: '#f3f0e5'
+    },
+    seo: {
+      title: 'WRECKSHIFT',
+      description: 'An arcade police-chase driving game for Android: three arenas, ten cars, 45 missions, Showdowns, leaderboards and Wi-Fi multiplayer. Coming soon.',
+      image: '/assets/games/wreckshift/web/og-1200x630.webp'
+    },
+    featured: true
+  },
+  {
   "id": "sorting-war",
   "slug": "sorting-war",
   "title": "Sorting War",
